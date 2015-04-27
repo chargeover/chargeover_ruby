@@ -46,80 +46,19 @@ module Chargeover
       end
 
       def get(url)
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.get
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+        request :get, url
       end
 
       def post(url, payload = {})
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.post do |req|
-          req.headers['Content-Type'] = 'application/json'
-          req.body = payload.to_json
-        end
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-        attributes['response']
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+        request :post, url, payload
       end
 
       def put(url, payload)
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.put do |req|
-          req.headers['Content-Type'] = 'application/json'
-          req.body = payload.to_json
-        end
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-        attributes['response']
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+        request :put, url, payload
       end
 
       def delete(url)
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.delete
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-        attributes['response']
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+        request :delete, url
       end
 
       def successful_response?(response)
@@ -130,6 +69,28 @@ module Chargeover
 
       def raise_error(status, message = nil)
         raise ChargeoverException.new(status, message)
+      end
+
+      private
+
+      def request(method, url, payload={})
+        conn = Faraday.new(url)
+        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
+        response = conn.send(method) do |req|
+          req.headers['Content-Type'] = 'application/json'
+          req.body = payload.to_json unless payload.empty?
+        end
+
+        # handle server down errors without parsing the response body
+        raise_error(response.status) if response.status == 500
+
+        attributes = JSON.parse(response.body)
+
+        if successful_response?(response)
+          attributes['response']
+        else
+          raise_error(response.status, attributes['message'])
+        end
       end
     end
 

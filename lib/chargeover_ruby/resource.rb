@@ -96,15 +96,13 @@ module Chargeover
 
     def initialize(attributes)
       attributes.each_key do |attribute|
-        #if self.respond_to?("#{attribute}=")
-          if attribute.end_with?('datetime') || attribute == 'date'
-            if attributes[attribute] != nil && attributes[attribute].length > 0
-              send("#{attribute}=", DateTime.parse(attributes[attribute]))
-            end
-          else
-            send("#{attribute}=", attributes[attribute])
+        if attribute.end_with?('datetime') || attribute == 'date'
+          if attributes[attribute] != nil && attributes[attribute].length > 0
+            send("#{attribute}=", DateTime.parse(attributes[attribute]))
           end
-        #end
+        else
+          send("#{attribute}=", attributes[attribute])
+        end
       end
     end
 

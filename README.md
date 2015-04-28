@@ -2,6 +2,9 @@
 
 TODO: Write a gem description
 
+## Status
+[![Build Status](https://travis-ci.org/buffym/chargeover_ruby.svg?branch=master)](https://travis-ci.org/buffym/chargeover_ruby)
+
 ## Installation
 
 Add this line to your application's Gemfile:

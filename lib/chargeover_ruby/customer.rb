@@ -59,7 +59,7 @@ module Chargeover
                   :tags
 
     def self.destroy(customer_id)
-      response = delete(base_url + "/#{customer_id}")
+      delete(base_url + "/#{customer_id}")
     end
 
     def update_attributes(attributes)

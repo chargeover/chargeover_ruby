@@ -30,7 +30,7 @@ module Chargeover
     end
 
     def self.destroy(card_id)
-      response = delete(base_url + "/#{card_id}")
+      delete(base_url + "/#{card_id}")
     end
   end
 end

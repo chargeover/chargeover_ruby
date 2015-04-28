@@ -19,7 +19,6 @@ module Chargeover
                   :item_accounting_sku,
                   :item_units,
                   :line_item_id,
-                  :tierset,
                   :item_token
 
     def item

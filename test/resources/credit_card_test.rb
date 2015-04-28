@@ -1,7 +1,7 @@
 require_relative '../test_helper'
 
 class ContactTest < ChargoverRubyTest
-  def test_exists
+  def test_contact_exists
     assert Chargeover::CreditCard
   end
 

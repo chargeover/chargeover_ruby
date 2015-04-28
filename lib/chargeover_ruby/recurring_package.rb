@@ -42,7 +42,6 @@ module Chargeover
                   :package_status_name,
                   :package_status_str,
                   :package_status_state,
-                  :line_items,
                   :item_type,
                   :holduntil_datetime,
                   :cancel_datetime
@@ -204,27 +203,27 @@ module Chargeover
           paymethod: pay_method
       }
       data.merge!(options)
-      response = post(base_url + "/#{self.package_id}?action=paymethod", data)
+      post(base_url + "/#{self.package_id}?action=paymethod", data)
       Chargeover::RecurringPackage.find(self.package_id)
     end
 
     def update_paycycle(pay_cycle)
-      response = post(base_url + "/#{self.package_id}?action=paycycle", { paycycle: pay_cycle })
+      post(base_url + "/#{self.package_id}?action=paycycle", { paycycle: pay_cycle })
       Chargeover::RecurringPackage.find(self.package_id)
     end
 
     def update_hold_date(hold_date)
-      response = post(base_url + "/#{self.package_id}?action=hold", { holduntil_datetime: hold_date })
+      post(base_url + "/#{self.package_id}?action=hold", { holduntil_datetime: hold_date })
       Chargeover::RecurringPackage.find(self.package_id)
     end
 
     def update_custom_1(new_value)
-      response = put(base_url + "/#{self.package_id}", { custom_1: new_value })
+      put(base_url + "/#{self.package_id}", { custom_1: new_value })
       Chargeover::RecurringPackage.find(self.package_id)
     end
 
     def update_payment_terms(new_value)
-      response = put(base_url + "/#{self.package_id}", { terms_id: new_value })
+      put(base_url + "/#{self.package_id}", { terms_id: new_value })
       Chargeover::RecurringPackage.find(self.package_id)
     end
 

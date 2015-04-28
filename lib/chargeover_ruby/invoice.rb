@@ -110,7 +110,7 @@ module Chargeover
     end
 
     def send_email(options = {})
-      response = post(base_url + "/#{self.invoice_id}?action=email", options)
+      post(base_url + "/#{self.invoice_id}?action=email", options)
     end
 
 private

@@ -15,14 +15,12 @@ module Chargeover
                   :mod_datetime,
                   :name,
                   :display_as,
-                  :username,
-                  :customers
-
+                  :username
 
     self.prefix = '/user'
 
     def self.destroy(contact_id)
-      response = delete(base_url + "/#{contact_id}")
+      delete(base_url + "/#{contact_id}")
     end
 
     def self.find_all_by_customer_id(customer_id)
@@ -51,6 +49,10 @@ module Chargeover
         end
       end
       cus
+    end
+
+    def customers=(customers)
+      @customers = customers
     end
 
     def has_customer?(customer_id)

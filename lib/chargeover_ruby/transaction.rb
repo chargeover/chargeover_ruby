@@ -23,5 +23,14 @@ module Chargeover
         :customer_id,
         :applied_to
 
+    def refund(amount = nil)
+      data = {}
+      unless amount.nil?
+        data[:amount] = amount
+      end
+
+      response = post(base_url + "/#{self.transaction_id}?action=refund", data)
+      Transaction.find(response['id'])
+    end
   end
 end

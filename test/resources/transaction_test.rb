@@ -89,4 +89,34 @@ class TransactionTest < ChargoverRubyTest
     end
   end
 
+  def test_should_refund_a_payment_via_a_tokenized_card
+    VCR.use_cassette('refund_tokenized_payment', :match_requests_on => [:anonymized_uri]) do
+      transaction = Chargeover::Transaction.find(145)
+      assert_equal 104.94, transaction.amount
+      refund = transaction.refund
+      assert_equal 'ref', refund.transaction_type
+      assert_equal -104.94, refund.amount
+    end
+  end
+
+  def test_should_refund_a_transaction_without_amount
+    VCR.use_cassette('refund_cc_payment_full_amount', :match_requests_on => [:anonymized_uri]) do
+      transaction = Chargeover::Transaction.find(128)
+      assert_equal 99.00, transaction.amount
+      refund = transaction.refund
+      assert_equal 'ref', refund.transaction_type
+      assert_equal -99.00, refund.amount
+    end
+  end
+
+  def test_should_refund_a_transaction_with_amount
+    VCR.use_cassette('refund_cc_payment_partial_amount', :match_requests_on => [:anonymized_uri]) do
+      transaction = Chargeover::Transaction.find(131)
+      assert_equal 99.00, transaction.amount
+      refund = transaction.refund(10.00)
+      assert_equal 'ref', refund.transaction_type
+      assert_equal -10.00, refund.amount
+    end
+  end
+
 end

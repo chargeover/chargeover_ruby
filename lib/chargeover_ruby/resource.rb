@@ -74,7 +74,7 @@ module Chargeover
       private
 
       def request(method, url, payload={})
-        conn = Faraday.new(url)
+        conn = Faraday.new(url, ssl: { version: :TLSv1 })
         conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
         response = conn.send(method) do |req|
           req.headers['Content-Type'] = 'application/json'

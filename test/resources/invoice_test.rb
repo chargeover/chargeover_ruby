@@ -33,4 +33,19 @@ class InvoiceTest < ChargoverRubyTest
     end
   end
 
+  def test_query_interface
+    VCR.use_cassette('query_invoices', :match_requests_on => [:anonymized_uri]) do
+      options = [
+        { field: 'invoice_status_str', operator: 'EQUALS', value: 'open-overdue' }
+      ]
+      invoices = Chargeover::Invoice.query(options, 0, 100, 'invoice_id:ASC')
+      assert_equal 9, invoices.length
+
+      invoices.each do |invoice|
+        assert_equal 'open-overdue', invoice.invoice_status_str
+        assert invoice.balance > 0
+      end
+    end
+  end
+
 end

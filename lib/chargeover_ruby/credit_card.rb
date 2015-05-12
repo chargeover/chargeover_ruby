@@ -19,9 +19,11 @@ module Chargeover
         :customer_id
 
     def self.find_all_by_customer_id(customer_id)
-      filter = "?where=customer_id:EQUALS:#{customer_id}"
+      options = [
+          { field: 'customer_id', operator: 'EQUALS', value: customer_id }
+      ]
 
-      response = get(base_url + filter)
+      response = get(build_query(options))
       cards = []
       response.each do |card|
         cards << new(card)

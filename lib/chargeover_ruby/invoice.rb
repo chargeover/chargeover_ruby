@@ -61,20 +61,11 @@ module Chargeover
         :taxes
 
 
-    def self.find_all_by_customer_id(customer_id, sort = '', options = [])
-      filter = "?where=customer_id:EQUALS:#{customer_id}"
+    def self.find_all_by_customer_id(customer_id, sort = '', options = [], limit = 100, offset = 0)
+      options << { field: 'customer_id', operator: 'EQUALS', value: customer_id }
+      url = build_query(options, offset, limit, sort)
 
-      query = options.map{ |option| "#{option[:field]}:#{option[:operator]}:#{option[:value]}"}.join(',')
-
-      if query &&query.length > 0
-        filter += ',' + query
-      end
-
-      if sort.length > 0
-        filter += '&order=' + sort
-      end
-
-      response = get(base_url + filter)
+      response = get(url)
       invoices = []
       response.each do |invoice|
         invoices << new(invoice)
@@ -83,21 +74,11 @@ module Chargeover
     end
 
     def self.find_all_by_package_id(package_id, sort = '', options = [], limit = 100, offset = 0)
-      filter = "?where=package_id:EQUALS:#{package_id}"
+      options << { field: 'package_id', operator: 'EQUALS', value: package_id}
 
-      query = options.map{ |option| "#{option[:field]}:#{option[:operator]}:#{option[:value]}"}.join(',')
+      url = build_query(options, offset, limit, sort)
 
-      if query &&query.length > 0
-        filter += ',' + query
-      end
-
-      if sort.length > 0
-        filter += '&order=' + sort
-      end
-
-      filter += "limit=#{limit}?offset=#{offset}"
-
-      response = get(base_url + filter)
+      response = get(url)
       invoices = []
       response.each do |invoice|
         invoices << new(invoice)
@@ -116,7 +97,7 @@ module Chargeover
 private
 
     attr_writer :write_datetime
+
+
   end
-
-
 end

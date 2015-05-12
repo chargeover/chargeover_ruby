@@ -10,4 +10,15 @@ class ResourceTest < ChargoverRubyTest
     assert Chargeover::Resource.new({'does_not_exist' => 'some value'})
   end
 
+  def test_build_query_string
+    options = [
+        { field: :customer_id, operator: 'EQUALS', value: '22' },
+        { field: 'field_2', operator: :lt, value: 'test' }
+    ]
+
+    url = Chargeover::Customer.send(:build_query, options, 0, 100, 'customer_id:ASC')
+
+    assert_equal 'https://imagerelay-staging.chargeover.com/api/v3/customer?where=customer_id:EQUALS:22,field_2:LT:test&order=customer_id:ASC&limit=100&offset=0', url
+  end
+
 end

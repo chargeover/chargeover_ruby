@@ -40,6 +40,20 @@ module Chargeover
         objs
       end
 
+      def query(options = [], offset = 0, limit = 100, sort = '')
+        objs = []
+
+        url = build_query(options, offset, limit, sort)
+
+        response = get(url)
+
+        response.each do |obj|
+            objs << new(obj)
+        end
+
+        objs
+      end
+
       def create(attributes)
         response = post(base_url, attributes)
         self.find(response['id'])
@@ -92,6 +106,18 @@ module Chargeover
           raise_error(response.status, attributes['message'])
         end
       end
+
+      def build_query(options, offset = 0, limit = 100, sort = '')
+        query = "?where=#{options.map{ |option| "#{option[:field].to_s.downcase}:#{option[:operator].to_s.upcase}:#{option[:value]}"}.join(',')}"
+
+        if sort.length > 0
+          query += '&order=' + sort
+        end
+
+        query += "&limit=#{limit}&offset=#{offset}"
+        base_url + query
+      end
+
     end
 
     def initialize(attributes)

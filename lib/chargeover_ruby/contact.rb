@@ -24,11 +24,13 @@ module Chargeover
     end
 
     def self.find_all_by_customer_id(customer_id)
-      filter = "?where=customers.customer_id:EQUALS:#{customer_id}"
+      options = [
+          { field: 'customers.customer_id', operator: 'EQUALS', value: customer_id}
+      ]
 
-      filter += "limit=#{100}?offset=#{0}"
+      url = build_query(options, 0, 100)
 
-      response = get(base_url + filter)
+      response = get(url)
       contacts = []
       response.each do |contact|
         contacts << Chargeover::Contact.find(contact['user_id'])

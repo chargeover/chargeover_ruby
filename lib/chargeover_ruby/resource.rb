@@ -44,6 +44,7 @@ module Chargeover
         objs = []
 
         url = build_query(options, offset, limit, sort)
+        url = build_query(options, offset, limit, sort)
 
         response = get(url)
 

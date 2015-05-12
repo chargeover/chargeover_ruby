@@ -48,4 +48,12 @@ class InvoiceTest < ChargoverRubyTest
     end
   end
 
+  def test_should_return_customer
+    VCR.use_cassette('invoice_customer', :match_requests_on => [:anonymized_uri]) do
+      invoice = Chargeover::Invoice.find(10116)
+      assert_equal Chargeover::Customer, invoice.customer.class
+      assert_equal 'Test Customer', invoice.customer.company
+    end
+  end
+
 end

@@ -94,6 +94,10 @@ module Chargeover
       post(base_url + "/#{self.invoice_id}?action=email", options)
     end
 
+    def customer
+      @customer ||= Chargeover::Customer.find(self.customer_id)
+    end
+
 private
 
     attr_writer :write_datetime

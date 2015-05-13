@@ -98,6 +98,15 @@ module Chargeover
       @customer ||= Chargeover::Customer.find(self.customer_id)
     end
 
+    def recurring_package
+      unless @recurring_package
+        if self.package_id && self.package_id.to_s.length > 0
+          @recurring_package = Chargeover::RecurringPackage.find(self.package_id)
+        end
+      end
+      @recurring_package
+    end
+
 private
 
     attr_writer :write_datetime

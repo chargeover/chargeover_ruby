@@ -56,4 +56,19 @@ class InvoiceTest < ChargoverRubyTest
     end
   end
 
+  def test_should_return_recurring_package
+    VCR.use_cassette('invoice_recurring_package_present', :match_requests_on => [:anonymized_uri]) do
+      invoice = Chargeover::Invoice.find(10104)
+      assert_equal Chargeover::RecurringPackage, invoice.recurring_package.class
+      assert_equal invoice.package_id, invoice.recurring_package.package_id
+    end
+  end
+
+  def test_should_not_return_a_recurring_package
+    VCR.use_cassette('invoice_recurring_package_not_present', :match_requests_on => [:anonymized_uri]) do
+      invoice = Chargeover::Invoice.find(10118)
+      assert_nil invoice.recurring_package
+    end
+  end
+
 end

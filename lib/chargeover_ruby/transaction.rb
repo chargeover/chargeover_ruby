@@ -23,6 +23,20 @@ module Chargeover
         :customer_id,
         :applied_to
 
+    class << self
+
+      def attempt_payment(customer_id, invoice_ids, amount = nil)
+        data = { customer_id: customer_id, applied_to: invoice_ids }
+        if amount
+          data[:amount] = amount
+        end
+
+        response = post(base_url + '?action=pay', data)
+        Transaction.find(response['id'])
+      end
+
+    end
+
     def refund(amount = nil)
       data = {}
       unless amount.nil?

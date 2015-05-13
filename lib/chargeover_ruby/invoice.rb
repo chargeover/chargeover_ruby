@@ -107,6 +107,10 @@ module Chargeover
       @recurring_package
     end
 
+    def attempt_payment(amount = nil)
+      Chargeover::Transaction.attempt_payment(self.customer_id, [ self.invoice_id ], amount)
+    end
+
 private
 
     attr_writer :write_datetime

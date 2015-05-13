@@ -119,4 +119,19 @@ class TransactionTest < ChargoverRubyTest
     end
   end
 
+  def test_should_attempt_payment_of_an_invoice
+    VCR.use_cassette('attempt_payment_of_invoice', :match_requests_on => [:anonymized_uri]) do
+      transaction = Chargeover::Transaction.attempt_payment(35, [ '10064' ])
+      assert_equal 4500, transaction.amount
+    end
+  end
+
+  def test_should_attempt_payment_of_an_invoice_and_fail
+    VCR.use_cassette('attempt_failure_of_invoice', :match_requests_on => [:anonymized_uri]) do
+      assert_raises(Chargeover::ChargeoverException) do
+        Chargeover::Transaction.attempt_payment(34, [ '10063' ])
+      end
+    end
+  end
+
 end

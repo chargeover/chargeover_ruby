@@ -71,4 +71,25 @@ class InvoiceTest < ChargoverRubyTest
     end
   end
 
+  def test_should_attempt_payment
+    VCR.use_cassette('invoice_attempt_payment', :match_requests_on => [:anonymized_uri]) do
+      invoice = Chargeover::Invoice.find(10088)
+      transaction = invoice.attempt_payment
+      assert_equal 1259.28, transaction.amount
+      invoice = Chargeover::Invoice.find(10088)
+      assert_equal 0, invoice.balance
+    end
+  end
+
+  def test_should_attempt_payment_with_amount
+    VCR.use_cassette('invoice_attempt_payment_with_amount', :match_requests_on => [:anonymized_uri]) do
+      invoice = Chargeover::Invoice.find(10115)
+      assert_equal 314.82, invoice.balance
+      transaction = invoice.attempt_payment(100.00)
+      assert_equal 100, transaction.amount
+      invoice = Chargeover::Invoice.find(10115)
+      assert_equal 214.82, invoice.balance
+    end
+  end
+
 end

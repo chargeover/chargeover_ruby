@@ -1,0 +1,169 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/package/640
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Apr 2015 14:13:30 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '2659'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"terms_id\":2,\n    \"currency_id\":1,\n    \"external_key\":null,\n
+        \   \"token\":\"hzfa1854bvry\",\n    \"nickname\":\"\",\n    \"paymethod\":\"crd\",\n
+        \   \"paycycle\":\"mon\",\n    \"bill_addr1\":null,\n    \"bill_addr2\":null,\n
+        \   \"bill_addr3\":null,\n    \"bill_city\":null,\n    \"bill_state\":null,\n
+        \   \"bill_postcode\":null,\n    \"bill_country\":null,\n    \"bill_notes\":null,\n
+        \   \"ship_addr1\":null,\n    \"ship_addr2\":null,\n    \"ship_addr3\":null,\n
+        \   \"ship_city\":null,\n    \"ship_state\":null,\n    \"ship_postcode\":null,\n
+        \   \"ship_country\":null,\n    \"ship_notes\":null,\n    \"creditcard_id\":75,\n
+        \   \"ach_id\":null,\n    \"tokenized_id\":null,\n    \"custom_1\":\"123456\",\n
+        \   \"custom_2\":null,\n    \"custom_3\":null,\n    \"write_datetime\":\"2015-04-15
+        07:48:25\",\n    \"mod_datetime\":\"2015-04-15 08:34:28\",\n    \"suspendfrom_datetime\":null,\n
+        \   \"suspendto_datetime\":null,\n    \"cancel_datetime\":null,\n    \"holduntil_datetime\":\"2015-04-15
+        00:00:00\",\n    \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n
+        \   \"amount_collected\":0,\n    \"amount_invoiced\":0,\n    \"amount_due\":0,\n
+        \   \"next_invoice_datetime\":\"2015-04-16 00:00:01\",\n    \"package_id\":640,\n
+        \   \"customer_id\":50,\n    \"package_status_id\":2,\n    \"package_status_name\":\"Current\",\n
+        \   \"package_status_str\":\"active-current\",\n    \"package_status_state\":\"a\",\n
+        \   \"line_items\":[\n      {\n        \"item_id\":3,\n        \"tierset_id\":86,\n
+        \       \"external_key\":null,\n        \"nickname\":\"\",\n        \"descrip\":\"Digital
+        Asset Management Services \\r\\n{{ \\\"now\\\"|date(\\\"F j\\\") }} to {{
+        \\\"now\\\"|date_modify(\\\"+1 month\\\")|date_modify(\\\"-1 day\\\")|date(\\\"F
+        j, Y\\\") }}\",\n        \"trial_days\":0,\n        \"trial_units\":0,\n        \"custom_1\":null,\n
+        \       \"custom_2\":null,\n        \"custom_3\":null,\n        \"subscribe_datetime\":\"2015-04-15
+        07:48:25\",\n        \"cancel_datetime\":null,\n        \"expire_datetime\":null,\n
+        \       \"expire_recurs\":null,\n        \"license\":\"\",\n        \"item_name\":\"Image
+        Relay Big Plan\",\n        \"item_external_key\":\"enterprise\",\n        \"item_accounting_sku\":null,\n
+        \       \"item_token\":\"4xjplvwgunh2\",\n        \"item_units\":null,\n        \"line_item_id\":700,\n
+        \       \"tierset\":{\n          \"tierset_id\":86,\n          \"setup\":0,\n
+        \         \"base\":500,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"mon\",\n
+        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-04-06
+        08:58:06\",\n          \"mod_datetime\":\"2015-04-06 08:58:06\",\n          \"setup_formatted\":\"$
+        0.00\",\n          \"base_formatted\":\"$ 500.00\",\n          \"percent_formatted\":\"0
+        %\",\n          \"pricemodel_desc\":\"Flat Pricing (e.g. $X dollars per month)\",\n
+        \         \"tiers\":[\n            \n          ]\n        }\n      }\n    ]\n
+        \ }\n}"
+    http_version: 
+  recorded_at: Wed, 15 Apr 2015 14:13:35 GMT
+- request:
+    method: put
+    uri: https://imagerelay-staging.chargeover.com/api/v3/package/640
+    body:
+      encoding: UTF-8
+      string: ! '{"custom_1":"777777","terms_id":3}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Date:
+      - Wed, 15 Apr 2015 14:13:31 GMT
+      Server:
+      - Apache
+      Location:
+      - https://imagerelay-staging.chargeover.com/api/v3/package/640
+      Content-Length:
+      - '82'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":202,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"id\":640\n  }\n}"
+    http_version: 
+  recorded_at: Wed, 15 Apr 2015 14:13:35 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/package/640
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Apr 2015 14:13:31 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '2659'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"terms_id\":3,\n    \"currency_id\":1,\n    \"external_key\":null,\n
+        \   \"token\":\"hzfa1854bvry\",\n    \"nickname\":\"\",\n    \"paymethod\":\"crd\",\n
+        \   \"paycycle\":\"mon\",\n    \"bill_addr1\":null,\n    \"bill_addr2\":null,\n
+        \   \"bill_addr3\":null,\n    \"bill_city\":null,\n    \"bill_state\":null,\n
+        \   \"bill_postcode\":null,\n    \"bill_country\":null,\n    \"bill_notes\":null,\n
+        \   \"ship_addr1\":null,\n    \"ship_addr2\":null,\n    \"ship_addr3\":null,\n
+        \   \"ship_city\":null,\n    \"ship_state\":null,\n    \"ship_postcode\":null,\n
+        \   \"ship_country\":null,\n    \"ship_notes\":null,\n    \"creditcard_id\":75,\n
+        \   \"ach_id\":null,\n    \"tokenized_id\":null,\n    \"custom_1\":\"777777\",\n
+        \   \"custom_2\":null,\n    \"custom_3\":null,\n    \"write_datetime\":\"2015-04-15
+        07:48:25\",\n    \"mod_datetime\":\"2015-04-15 09:13:31\",\n    \"suspendfrom_datetime\":null,\n
+        \   \"suspendto_datetime\":null,\n    \"cancel_datetime\":null,\n    \"holduntil_datetime\":\"2015-04-15
+        00:00:00\",\n    \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n
+        \   \"amount_collected\":0,\n    \"amount_invoiced\":0,\n    \"amount_due\":0,\n
+        \   \"next_invoice_datetime\":\"2015-04-16 00:00:01\",\n    \"package_id\":640,\n
+        \   \"customer_id\":50,\n    \"package_status_id\":2,\n    \"package_status_name\":\"Current\",\n
+        \   \"package_status_str\":\"active-current\",\n    \"package_status_state\":\"a\",\n
+        \   \"line_items\":[\n      {\n        \"item_id\":3,\n        \"tierset_id\":86,\n
+        \       \"external_key\":null,\n        \"nickname\":\"\",\n        \"descrip\":\"Digital
+        Asset Management Services \\r\\n{{ \\\"now\\\"|date(\\\"F j\\\") }} to {{
+        \\\"now\\\"|date_modify(\\\"+1 month\\\")|date_modify(\\\"-1 day\\\")|date(\\\"F
+        j, Y\\\") }}\",\n        \"trial_days\":0,\n        \"trial_units\":0,\n        \"custom_1\":null,\n
+        \       \"custom_2\":null,\n        \"custom_3\":null,\n        \"subscribe_datetime\":\"2015-04-15
+        07:48:25\",\n        \"cancel_datetime\":null,\n        \"expire_datetime\":null,\n
+        \       \"expire_recurs\":null,\n        \"license\":\"\",\n        \"item_name\":\"Image
+        Relay Big Plan\",\n        \"item_external_key\":\"enterprise\",\n        \"item_accounting_sku\":null,\n
+        \       \"item_token\":\"4xjplvwgunh2\",\n        \"item_units\":null,\n        \"line_item_id\":700,\n
+        \       \"tierset\":{\n          \"tierset_id\":86,\n          \"setup\":0,\n
+        \         \"base\":500,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"mon\",\n
+        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-04-06
+        08:58:06\",\n          \"mod_datetime\":\"2015-04-06 08:58:06\",\n          \"setup_formatted\":\"$
+        0.00\",\n          \"base_formatted\":\"$ 500.00\",\n          \"percent_formatted\":\"0
+        %\",\n          \"pricemodel_desc\":\"Flat Pricing (e.g. $X dollars per month)\",\n
+        \         \"tiers\":[\n            \n          ]\n        }\n      }\n    ]\n
+        \ }\n}"
+    http_version: 
+  recorded_at: Wed, 15 Apr 2015 14:13:36 GMT
+recorded_with: VCR 2.9.3

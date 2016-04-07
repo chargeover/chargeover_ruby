@@ -1,0 +1,284 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/invoice?limit=100&offset=0&order=invoice_id:ASC&where=invoice_status_str:EQUALS:open-overdue
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 May 2015 16:54:35 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\":
+        \"\",\n    \"response\": [\n        {\n            \"invoice_id\": 10062,\n
+        \           \"currency_id\": 1,\n            \"terms_id\": 2,\n            \"token\":
+        \"mqy7fwb5pnkt\",\n            \"refnumber\": \"10062\",\n            \"cycle_this_date\":
+        null,\n            \"bill_addr1\": \"\",\n            \"bill_addr2\": \"\",\n
+        \           \"bill_addr3\": \"\",\n            \"bill_city\": \"\",\n            \"bill_state\":
+        \"\",\n            \"bill_postcode\": \"\",\n            \"bill_country\":
+        \"\",\n            \"bill_notes\": null,\n            \"ship_addr1\": null,\n
+        \           \"ship_addr2\": null,\n            \"ship_addr3\": null,\n            \"ship_city\":
+        null,\n            \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-03-31 09:22:38\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        1500,\n            \"total\": 1500,\n            \"taxes\": 0,\n            \"credits\":
+        0,\n            \"payments\": 0,\n            \"applied\": 0,\n            \"sum_base\":
+        1500,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 1500,\n            \"is_void\": false,\n
+        \           \"due_date\": \"2015-01-31\",\n            \"terms_name\": \"Net
+        30\",\n            \"terms_days\": 30,\n            \"days_overdue\": 101,\n
+        \           \"is_overdue\": true,\n            \"date\": \"2015-01-01\",\n
+        \           \"delay_datetime\": null,\n            \"bill_block\": \"\",\n
+        \           \"ship_block\": \"\",\n            \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/mqy7fwb5pnkt\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/mqy7fwb5pnkt\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/mqy7fwb5pnkt\",\n
+        \           \"package_id\": 624,\n            \"customer_id\": 34\n        },\n
+        \       {\n            \"invoice_id\": 10063,\n            \"currency_id\":
+        1,\n            \"terms_id\": 2,\n            \"token\": \"ijsd3opr2q1n\",\n
+        \           \"refnumber\": \"10063\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": null,\n            \"bill_addr2\": null,\n            \"bill_addr3\":
+        null,\n            \"bill_city\": null,\n            \"bill_state\": null,\n
+        \           \"bill_postcode\": null,\n            \"bill_country\": null,\n
+        \           \"bill_notes\": null,\n            \"ship_addr1\": null,\n            \"ship_addr2\":
+        null,\n            \"ship_addr3\": null,\n            \"ship_city\": null,\n
+        \           \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-03-31 11:02:00\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        4500,\n            \"total\": 4500,\n            \"taxes\": 0,\n            \"credits\":
+        0,\n            \"payments\": 0,\n            \"applied\": 0,\n            \"sum_base\":
+        4500,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 4500,\n            \"is_void\": false,\n
+        \           \"due_date\": \"2015-04-30\",\n            \"terms_name\": \"Net
+        30\",\n            \"terms_days\": 30,\n            \"days_overdue\": 12,\n
+        \           \"is_overdue\": true,\n            \"date\": \"2015-03-31\",\n
+        \           \"delay_datetime\": null,\n            \"bill_block\": \"\",\n
+        \           \"ship_block\": \"\",\n            \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/ijsd3opr2q1n\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/ijsd3opr2q1n\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/ijsd3opr2q1n\",\n
+        \           \"package_id\": 625,\n            \"customer_id\": 34\n        },\n
+        \       {\n            \"invoice_id\": 10064,\n            \"currency_id\":
+        1,\n            \"terms_id\": 2,\n            \"token\": \"8j962rzdbmp3\",\n
+        \           \"refnumber\": \"10064\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": null,\n            \"bill_addr2\": null,\n            \"bill_addr3\":
+        null,\n            \"bill_city\": null,\n            \"bill_state\": null,\n
+        \           \"bill_postcode\": null,\n            \"bill_country\": null,\n
+        \           \"bill_notes\": null,\n            \"ship_addr1\": null,\n            \"ship_addr2\":
+        null,\n            \"ship_addr3\": null,\n            \"ship_city\": null,\n
+        \           \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-03-31 11:25:42\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        4500,\n            \"total\": 4500,\n            \"taxes\": 0,\n            \"credits\":
+        0,\n            \"payments\": 0,\n            \"applied\": 0,\n            \"sum_base\":
+        4500,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 4500,\n            \"is_void\": false,\n
+        \           \"due_date\": \"2015-04-30\",\n            \"terms_name\": \"Net
+        30\",\n            \"terms_days\": 30,\n            \"days_overdue\": 12,\n
+        \           \"is_overdue\": true,\n            \"date\": \"2015-03-31\",\n
+        \           \"delay_datetime\": null,\n            \"bill_block\": \"\",\n
+        \           \"ship_block\": \"\",\n            \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/8j962rzdbmp3\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/8j962rzdbmp3\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/8j962rzdbmp3\",\n
+        \           \"package_id\": 626,\n            \"customer_id\": 35\n        },\n
+        \       {\n            \"invoice_id\": 10065,\n            \"currency_id\":
+        1,\n            \"terms_id\": 2,\n            \"token\": \"twrkn7bvy9d0\",\n
+        \           \"refnumber\": \"10065\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": \"72 E Blue Grass Road\",\n            \"bill_addr2\":
+        \"\",\n            \"bill_addr3\": \"\",\n            \"bill_city\": \"Burlington\",\n
+        \           \"bill_state\": \"VT\",\n            \"bill_postcode\": \"05401\",\n
+        \           \"bill_country\": \"United States\",\n            \"bill_notes\":
+        null,\n            \"ship_addr1\": null,\n            \"ship_addr2\": null,\n
+        \           \"ship_addr3\": null,\n            \"ship_city\": null,\n            \"ship_state\":
+        null,\n            \"ship_postcode\": null,\n            \"ship_country\":
+        null,\n            \"ship_notes\": null,\n            \"custom_1\": null,\n
+        \           \"custom_2\": null,\n            \"custom_3\": null,\n            \"write_datetime\":
+        \"2015-03-31 14:45:32\",\n            \"void_datetime\": null,\n            \"currency_symbol\":
+        \"$\",\n            \"currency_iso4217\": \"USD\",\n            \"invoice_status_name\":
+        \"Overdue\",\n            \"invoice_status_str\": \"open-overdue\",\n            \"invoice_status_state\":
+        \"o\",\n            \"subtotal\": 500,\n            \"total\": 535,\n            \"taxes\":
+        35,\n            \"credits\": 0,\n            \"payments\": 0,\n            \"applied\":
+        0,\n            \"sum_base\": 0,\n            \"sum_usage\": 0,\n            \"sum_onetime\":
+        500,\n            \"is_paid\": false,\n            \"balance\": 535,\n            \"is_void\":
+        false,\n            \"due_date\": \"2015-04-30\",\n            \"terms_name\":
+        \"Net 30\",\n            \"terms_days\": 30,\n            \"days_overdue\":
+        12,\n            \"is_overdue\": true,\n            \"date\": \"2015-03-31\",\n
+        \           \"delay_datetime\": null,\n            \"bill_block\": \"72 E
+        Blue Grass Road\\r\\nBurlington, VT 05401\\r\\nUnited States\",\n            \"ship_block\":
+        \"\",\n            \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/twrkn7bvy9d0\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/twrkn7bvy9d0\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/twrkn7bvy9d0\",\n
+        \           \"package_id\": null,\n            \"customer_id\": 36\n        },\n
+        \       {\n            \"invoice_id\": 10066,\n            \"currency_id\":
+        1,\n            \"terms_id\": 2,\n            \"token\": \"mz8kei1ugh9j\",\n
+        \           \"refnumber\": \"10066\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": null,\n            \"bill_addr2\": null,\n            \"bill_addr3\":
+        null,\n            \"bill_city\": null,\n            \"bill_state\": null,\n
+        \           \"bill_postcode\": null,\n            \"bill_country\": null,\n
+        \           \"bill_notes\": null,\n            \"ship_addr1\": null,\n            \"ship_addr2\":
+        null,\n            \"ship_addr3\": null,\n            \"ship_city\": null,\n
+        \           \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-03-31 15:36:33\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        6000,\n            \"total\": 6360,\n            \"taxes\": 360,\n            \"credits\":
+        0,\n            \"payments\": 0,\n            \"applied\": 0,\n            \"sum_base\":
+        6000,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 6360,\n            \"is_void\": false,\n
+        \           \"due_date\": \"2015-04-30\",\n            \"terms_name\": \"Net
+        30\",\n            \"terms_days\": 30,\n            \"days_overdue\": 12,\n
+        \           \"is_overdue\": true,\n            \"date\": \"2015-03-31\",\n
+        \           \"delay_datetime\": null,\n            \"bill_block\": \"\",\n
+        \           \"ship_block\": \"\",\n            \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/mz8kei1ugh9j\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/mz8kei1ugh9j\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/mz8kei1ugh9j\",\n
+        \           \"package_id\": 627,\n            \"customer_id\": 35\n        },\n
+        \       {\n            \"invoice_id\": 10067,\n            \"currency_id\":
+        1,\n            \"terms_id\": 2,\n            \"token\": \"6gfj0l4ct7m2\",\n
+        \           \"refnumber\": \"10067\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": \"\",\n            \"bill_addr2\": \"\",\n            \"bill_addr3\":
+        \"\",\n            \"bill_city\": \"\",\n            \"bill_state\": \"\",\n
+        \           \"bill_postcode\": \"\",\n            \"bill_country\": \"\",\n
+        \           \"bill_notes\": null,\n            \"ship_addr1\": null,\n            \"ship_addr2\":
+        null,\n            \"ship_addr3\": null,\n            \"ship_city\": null,\n
+        \           \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-04-01 08:52:14\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        297,\n            \"total\": 314.82,\n            \"taxes\": 17.82,\n            \"credits\":
+        0,\n            \"payments\": 0,\n            \"applied\": 0,\n            \"sum_base\":
+        297,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 314.82,\n            \"is_void\": false,\n
+        \           \"due_date\": \"2015-03-03\",\n            \"terms_name\": \"Net
+        30\",\n            \"terms_days\": 30,\n            \"days_overdue\": 70,\n
+        \           \"is_overdue\": true,\n            \"date\": \"2015-02-01\",\n
+        \           \"delay_datetime\": null,\n            \"bill_block\": \"\",\n
+        \           \"ship_block\": \"\",\n            \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/6gfj0l4ct7m2\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/6gfj0l4ct7m2\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/6gfj0l4ct7m2\",\n
+        \           \"package_id\": 628,\n            \"customer_id\": 35\n        },\n
+        \       {\n            \"invoice_id\": 10085,\n            \"currency_id\":
+        1,\n            \"terms_id\": 3,\n            \"token\": \"rpqesyz3nv4g\",\n
+        \           \"refnumber\": \"10085\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": null,\n            \"bill_addr2\": null,\n            \"bill_addr3\":
+        null,\n            \"bill_city\": null,\n            \"bill_state\": null,\n
+        \           \"bill_postcode\": null,\n            \"bill_country\": null,\n
+        \           \"bill_notes\": null,\n            \"ship_addr1\": null,\n            \"ship_addr2\":
+        null,\n            \"ship_addr3\": null,\n            \"ship_city\": null,\n
+        \           \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-04-16 07:06:19\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        99,\n            \"total\": 99,\n            \"taxes\": 0,\n            \"credits\":
+        0,\n            \"payments\": 99,\n            \"applied\": 198,\n            \"sum_base\":
+        99,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 99,\n            \"is_void\": false,\n            \"due_date\":
+        \"2015-04-16\",\n            \"terms_name\": \"Due on Receipt\",\n            \"terms_days\":
+        0,\n            \"days_overdue\": 26,\n            \"is_overdue\": true,\n
+        \           \"date\": \"2015-04-16\",\n            \"delay_datetime\": null,\n
+        \           \"bill_block\": \"\",\n            \"ship_block\": \"\",\n            \"url_permalink\":
+        \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/rpqesyz3nv4g\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/rpqesyz3nv4g\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/rpqesyz3nv4g\",\n
+        \           \"package_id\": 651,\n            \"customer_id\": 56\n        },\n
+        \       {\n            \"invoice_id\": 10090,\n            \"currency_id\":
+        1,\n            \"terms_id\": 3,\n            \"token\": \"91plswzcfh5o\",\n
+        \           \"refnumber\": \"10090\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": null,\n            \"bill_addr2\": null,\n            \"bill_addr3\":
+        null,\n            \"bill_city\": null,\n            \"bill_state\": null,\n
+        \           \"bill_postcode\": null,\n            \"bill_country\": null,\n
+        \           \"bill_notes\": null,\n            \"ship_addr1\": null,\n            \"ship_addr2\":
+        null,\n            \"ship_addr3\": null,\n            \"ship_city\": null,\n
+        \           \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-04-16 07:24:36\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        99,\n            \"total\": 99,\n            \"taxes\": 0,\n            \"credits\":
+        0,\n            \"payments\": 99,\n            \"applied\": 109,\n            \"sum_base\":
+        99,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 10,\n            \"is_void\": false,\n            \"due_date\":
+        \"2015-04-16\",\n            \"terms_name\": \"Due on Receipt\",\n            \"terms_days\":
+        0,\n            \"days_overdue\": 26,\n            \"is_overdue\": true,\n
+        \           \"date\": \"2015-04-16\",\n            \"delay_datetime\": null,\n
+        \           \"bill_block\": \"\",\n            \"ship_block\": \"\",\n            \"url_permalink\":
+        \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/91plswzcfh5o\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/91plswzcfh5o\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/91plswzcfh5o\",\n
+        \           \"package_id\": 654,\n            \"customer_id\": 58\n        },\n
+        \       {\n            \"invoice_id\": 10102,\n            \"currency_id\":
+        1,\n            \"terms_id\": 2,\n            \"token\": \"2u51vcoejqsl\",\n
+        \           \"refnumber\": \"10102\",\n            \"cycle_this_date\": null,\n
+        \           \"bill_addr1\": \"\",\n            \"bill_addr2\": \"\",\n            \"bill_addr3\":
+        \"\",\n            \"bill_city\": \"\",\n            \"bill_state\": \"\",\n
+        \           \"bill_postcode\": \"\",\n            \"bill_country\": \"\",\n
+        \           \"bill_notes\": null,\n            \"ship_addr1\": null,\n            \"ship_addr2\":
+        null,\n            \"ship_addr3\": null,\n            \"ship_city\": null,\n
+        \           \"ship_state\": null,\n            \"ship_postcode\": null,\n
+        \           \"ship_country\": null,\n            \"ship_notes\": null,\n            \"custom_1\":
+        null,\n            \"custom_2\": null,\n            \"custom_3\": null,\n
+        \           \"write_datetime\": \"2015-04-17 07:24:18\",\n            \"void_datetime\":
+        null,\n            \"currency_symbol\": \"$\",\n            \"currency_iso4217\":
+        \"USD\",\n            \"invoice_status_name\": \"Overdue\",\n            \"invoice_status_str\":
+        \"open-overdue\",\n            \"invoice_status_state\": \"o\",\n            \"subtotal\":
+        4500,\n            \"total\": 4815,\n            \"taxes\": 315,\n            \"credits\":
+        0,\n            \"payments\": 0,\n            \"applied\": 0,\n            \"sum_base\":
+        4500,\n            \"sum_usage\": 0,\n            \"sum_onetime\": 0,\n            \"is_paid\":
+        false,\n            \"balance\": 4815,\n            \"is_void\": false,\n
+        \           \"due_date\": \"2015-05-01\",\n            \"terms_name\": \"Net
+        30\",\n            \"terms_days\": 30,\n            \"days_overdue\": 11,\n
+        \           \"is_overdue\": true,\n            \"date\": \"2015-04-01\",\n
+        \           \"delay_datetime\": null,\n            \"bill_block\": \"\",\n
+        \           \"ship_block\": \"\",\n            \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/2u51vcoejqsl\",\n
+        \           \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/2u51vcoejqsl\",\n
+        \           \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/2u51vcoejqsl\",\n
+        \           \"package_id\": 666,\n            \"customer_id\": 66\n        }\n
+        \   ]\n}"
+    http_version: 
+  recorded_at: Tue, 12 May 2015 16:54:36 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/invoice/10118
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 13 May 2015 14:16:05 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains
+      Content-Length:
+      - '3035'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\":
+        \"\",\n    \"response\": {\n        \"invoice_id\": 10118,\n        \"currency_id\":
+        1,\n        \"terms_id\": 2,\n        \"token\": \"y3pxetd1msb6\",\n        \"refnumber\":
+        \"10118\",\n        \"cycle_this_date\": null,\n        \"bill_addr1\": \"144
+        Ross Hill\",\n        \"bill_addr2\": null,\n        \"bill_addr3\": null,\n
+        \       \"bill_city\": \"Huntington\",\n        \"bill_state\": \"Vermont\",\n
+        \       \"bill_postcode\": \"05462\",\n        \"bill_country\": null,\n        \"bill_notes\":
+        null,\n        \"ship_addr1\": null,\n        \"ship_addr2\": null,\n        \"ship_addr3\":
+        null,\n        \"ship_city\": null,\n        \"ship_state\": null,\n        \"ship_postcode\":
+        null,\n        \"ship_country\": null,\n        \"ship_notes\": null,\n        \"custom_1\":
+        null,\n        \"custom_2\": null,\n        \"custom_3\": null,\n        \"write_datetime\":
+        \"2015-05-13 09:15:06\",\n        \"void_datetime\": null,\n        \"currency_symbol\":
+        \"$\",\n        \"currency_iso4217\": \"USD\",\n        \"invoice_status_name\":
+        \"Unpaid\",\n        \"invoice_status_str\": \"open-unpaid\",\n        \"invoice_status_state\":
+        \"o\",\n        \"subtotal\": 50,\n        \"total\": 50,\n        \"taxes\":
+        0,\n        \"credits\": 0,\n        \"payments\": 0,\n        \"applied\":
+        0,\n        \"sum_base\": 0,\n        \"sum_usage\": 0,\n        \"sum_onetime\":
+        50,\n        \"is_paid\": false,\n        \"balance\": 50,\n        \"is_void\":
+        false,\n        \"due_date\": \"2015-06-12\",\n        \"terms_name\": \"Net
+        30\",\n        \"terms_days\": 30,\n        \"days_overdue\": 0,\n        \"is_overdue\":
+        false,\n        \"date\": \"2015-05-13\",\n        \"delay_datetime\": null,\n
+        \       \"bill_block\": \"144 Ross Hill\\r\\nHuntington, Vermont 05462\",\n
+        \       \"ship_block\": \"\",\n        \"url_permalink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/y3pxetd1msb6\",\n
+        \       \"url_paylink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/y3pxetd1msb6\",\n
+        \       \"url_pdflink\": \"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/y3pxetd1msb6\",\n
+        \       \"package_id\": null,\n        \"customer_id\": 37,\n        \"line_items\":
+        [\n            {\n                \"invoice_id\": 10118,\n                \"item_id\":
+        7,\n                \"tierset_id\": null,\n                \"descrip\": \"test\",\n
+        \               \"line_rate\": 50,\n                \"line_quantity\": 1,\n
+        \               \"line_usage\": 0,\n                \"tax_taxable\": 50,\n
+        \               \"tax_taxed\": 0,\n                \"tax_total\": 0,\n                \"is_base\":
+        false,\n                \"is_free\": false,\n                \"is_setup\":
+        false,\n                \"is_usage\": false,\n                \"is_recurring\":
+        false,\n                \"is_taxed\": \"0\",\n                \"custom_1\":
+        null,\n                \"custom_2\": null,\n                \"custom_3\":
+        null,\n                \"item_name\": \"Additional Bandwidth Blocks\",\n                \"item_external_key\":
+        \"additional_bandwidth\",\n                \"item_token\": \"q60xk2ozeyrn\",\n
+        \               \"item_accounting_sku\": null,\n                \"line_item_id\":
+        2796,\n                \"package_line_id\": null\n            }\n        ]\n
+        \   }\n}"
+    http_version: 
+  recorded_at: Wed, 13 May 2015 14:16:05 GMT
+recorded_with: VCR 2.9.3

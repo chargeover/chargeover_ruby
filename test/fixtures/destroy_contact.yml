@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user/396
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2015 20:16:47 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '576'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"user_id\":396,\n    \"external_key\":null,\n    \"first_name\":\"John\",\n
+        \   \"middle_name_glob\":null,\n    \"last_name\":\"Doe\",\n    \"name_suffix\":null,\n
+        \   \"title\":\"\",\n    \"email\":\"jd@example.com\",\n    \"token\":\"wek5obq31298\",\n
+        \   \"phone\":\"\",\n    \"write_datetime\":\"2015-04-06 12:46:03\",\n    \"mod_datetime\":\"2015-04-06
+        12:46:03\",\n    \"name\":\"John Doe\",\n    \"display_as\":\"John Doe\",\n
+        \   \"username\":\"8bur5c7g1voh\",\n    \"customers\":[\n      {\n        \"customer_id\":\"44\",\n
+        \       \"company\":\"IR Free Signup\"\n      }\n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Mon, 06 Apr 2015 20:17:01 GMT
+- request:
+    method: delete
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user/396
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2015 20:16:47 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '68'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":true\n}"
+    http_version: 
+  recorded_at: Mon, 06 Apr 2015 20:17:02 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user/396
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Mon, 06 Apr 2015 20:16:48 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '96'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":404,\n  \"status\":\"Error\",\n  \"message\":\"This
+        user does not exist.\",\n  \"response\":null\n}"
+    http_version: 
+  recorded_at: Mon, 06 Apr 2015 20:17:02 GMT
+recorded_with: VCR 2.9.3

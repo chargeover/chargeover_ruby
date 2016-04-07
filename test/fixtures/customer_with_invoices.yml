@@ -1,0 +1,196 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/customer/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 23 Mar 2015 16:04:14 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '1634'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"superuser_id\":348,\n    \"external_key\":\"my_external_key\",\n    \"token\":\"8c3nxe47hrdt\",\n
+        \   \"company\":\"Updated Company Name\",\n    \"bill_addr1\":\"New Street\",\n
+        \   \"bill_addr2\":\"Suite 42\",\n    \"bill_addr3\":\"\",\n    \"bill_city\":\"Mashpee\",\n
+        \   \"bill_state\":\"MA\",\n    \"bill_postcode\":\"05401\",\n    \"bill_country\":\"United
+        States\",\n    \"bill_notes\":null,\n    \"ship_addr1\":null,\n    \"ship_addr2\":null,\n
+        \   \"ship_addr3\":null,\n    \"ship_city\":null,\n    \"ship_state\":null,\n
+        \   \"ship_postcode\":null,\n    \"ship_country\":null,\n    \"ship_notes\":null,\n
+        \   \"terms_id\":2,\n    \"class_id\":null,\n    \"custom_1\":null,\n    \"custom_2\":null,\n
+        \   \"custom_3\":null,\n    \"admin_id\":3,\n    \"campaign_id\":null,\n    \"custtype_id\":null,\n
+        \   \"currency_id\":1,\n    \"no_taxes\":false,\n    \"no_dunning\":false,\n
+        \   \"write_datetime\":\"2015-03-18 11:58:28\",\n    \"write_ipaddr\":\"70.88.244.230\",\n
+        \   \"mod_datetime\":\"2015-03-19 09:55:38\",\n    \"mod_ipaddr\":\"70.88.244.230\",\n
+        \   \"terms_name\":\"Net 30\",\n    \"terms_days\":30,\n    \"paid\":0,\n
+        \   \"total\":600.99,\n    \"balance\":600.99,\n    \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/8c3nxe47hrdt\",\n
+        \   \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n    \"display_as\":\"Updated
+        Company Name\",\n    \"ship_block\":\"\",\n    \"bill_block\":\"New Street\\nSuite
+        42\\nMashpee MA 05401\\nUnited States\",\n    \"superuser_name\":\"Todd Customer\",\n
+        \   \"superuser_first_name\":\"Todd\",\n    \"superuser_last_name\":\"Customer\",\n
+        \   \"superuser_phone\":\"8025551212\",\n    \"superuser_email\":\"newemail@example.com\",\n
+        \   \"customer_id\":1,\n    \"tags\":[\n      \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Mon, 23 Mar 2015 16:04:19 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/invoice?where=customer_id:EQUALS:1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 23 Mar 2015 16:04:16 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '3349'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   {\n      \"invoice_id\":10000,\n      \"currency_id\":1,\n      \"terms_id\":3,\n
+        \     \"token\":\"lfthab4s5rgz\",\n      \"refnumber\":\"10000\",\n      \"bill_addr1\":null,\n
+        \     \"bill_addr2\":null,\n      \"bill_addr3\":null,\n      \"bill_city\":null,\n
+        \     \"bill_state\":null,\n      \"bill_postcode\":null,\n      \"bill_country\":null,\n
+        \     \"bill_notes\":null,\n      \"ship_addr1\":null,\n      \"ship_addr2\":null,\n
+        \     \"ship_addr3\":null,\n      \"ship_city\":null,\n      \"ship_state\":null,\n
+        \     \"ship_postcode\":null,\n      \"ship_country\":null,\n      \"ship_notes\":null,\n
+        \     \"custom_1\":null,\n      \"custom_2\":null,\n      \"custom_3\":null,\n
+        \     \"write_datetime\":\"2015-03-19 11:52:30\",\n      \"void_datetime\":null,\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"invoice_status_name\":\"Overdue\",\n
+        \     \"invoice_status_str\":\"open-overdue\",\n      \"invoice_status_state\":\"o\",\n
+        \     \"total\":100.99,\n      \"credits\":0,\n      \"payments\":0,\n      \"sum_base\":100.99,\n
+        \     \"sum_usage\":0,\n      \"sum_onetime\":0,\n      \"is_paid\":false,\n
+        \     \"balance\":100.99,\n      \"is_void\":false,\n      \"due_date\":\"2015-03-19\",\n
+        \     \"terms_name\":\"Due on Receipt\",\n      \"terms_days\":0,\n      \"days_overdue\":3,\n
+        \     \"is_overdue\":true,\n      \"date\":\"2015-03-19\",\n      \"delay_datetime\":null,\n
+        \     \"bill_block\":\"\",\n      \"ship_block\":\"\",\n      \"url_permalink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/lfthab4s5rgz\",\n
+        \     \"url_paylink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/lfthab4s5rgz\",\n
+        \     \"url_pdflink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/lfthab4s5rgz\",\n
+        \     \"package_id\":554,\n      \"customer_id\":1\n    },\n    {\n      \"invoice_id\":10003,\n
+        \     \"currency_id\":1,\n      \"terms_id\":2,\n      \"token\":\"by08pf5i6lkj\",\n
+        \     \"refnumber\":\"10003\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        12:47:32\",\n      \"void_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"invoice_status_name\":\"Unpaid\",\n
+        \     \"invoice_status_str\":\"open-unpaid\",\n      \"invoice_status_state\":\"o\",\n
+        \     \"total\":500,\n      \"credits\":0,\n      \"payments\":0,\n      \"sum_base\":500,\n
+        \     \"sum_usage\":0,\n      \"sum_onetime\":0,\n      \"is_paid\":false,\n
+        \     \"balance\":500,\n      \"is_void\":false,\n      \"due_date\":\"2015-04-19\",\n
+        \     \"terms_name\":\"Net 30\",\n      \"terms_days\":30,\n      \"days_overdue\":0,\n
+        \     \"is_overdue\":false,\n      \"date\":\"2015-03-20\",\n      \"delay_datetime\":null,\n
+        \     \"bill_block\":\"\",\n      \"ship_block\":\"\",\n      \"url_permalink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/by08pf5i6lkj\",\n
+        \     \"url_paylink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/by08pf5i6lkj\",\n
+        \     \"url_pdflink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/by08pf5i6lkj\",\n
+        \     \"package_id\":557,\n      \"customer_id\":1\n    }\n  ]\n}"
+    http_version: 
+  recorded_at: Mon, 23 Mar 2015 16:04:22 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/invoice?where=customer_id:EQUALS:1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 23 Mar 2015 16:04:17 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '3349'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   {\n      \"invoice_id\":10000,\n      \"currency_id\":1,\n      \"terms_id\":3,\n
+        \     \"token\":\"lfthab4s5rgz\",\n      \"refnumber\":\"10000\",\n      \"bill_addr1\":null,\n
+        \     \"bill_addr2\":null,\n      \"bill_addr3\":null,\n      \"bill_city\":null,\n
+        \     \"bill_state\":null,\n      \"bill_postcode\":null,\n      \"bill_country\":null,\n
+        \     \"bill_notes\":null,\n      \"ship_addr1\":null,\n      \"ship_addr2\":null,\n
+        \     \"ship_addr3\":null,\n      \"ship_city\":null,\n      \"ship_state\":null,\n
+        \     \"ship_postcode\":null,\n      \"ship_country\":null,\n      \"ship_notes\":null,\n
+        \     \"custom_1\":null,\n      \"custom_2\":null,\n      \"custom_3\":null,\n
+        \     \"write_datetime\":\"2015-03-19 11:52:30\",\n      \"void_datetime\":null,\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"invoice_status_name\":\"Overdue\",\n
+        \     \"invoice_status_str\":\"open-overdue\",\n      \"invoice_status_state\":\"o\",\n
+        \     \"total\":100.99,\n      \"credits\":0,\n      \"payments\":0,\n      \"sum_base\":100.99,\n
+        \     \"sum_usage\":0,\n      \"sum_onetime\":0,\n      \"is_paid\":false,\n
+        \     \"balance\":100.99,\n      \"is_void\":false,\n      \"due_date\":\"2015-03-19\",\n
+        \     \"terms_name\":\"Due on Receipt\",\n      \"terms_days\":0,\n      \"days_overdue\":3,\n
+        \     \"is_overdue\":true,\n      \"date\":\"2015-03-19\",\n      \"delay_datetime\":null,\n
+        \     \"bill_block\":\"\",\n      \"ship_block\":\"\",\n      \"url_permalink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/lfthab4s5rgz\",\n
+        \     \"url_paylink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/lfthab4s5rgz\",\n
+        \     \"url_pdflink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/lfthab4s5rgz\",\n
+        \     \"package_id\":554,\n      \"customer_id\":1\n    },\n    {\n      \"invoice_id\":10003,\n
+        \     \"currency_id\":1,\n      \"terms_id\":2,\n      \"token\":\"by08pf5i6lkj\",\n
+        \     \"refnumber\":\"10003\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        12:47:32\",\n      \"void_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"invoice_status_name\":\"Unpaid\",\n
+        \     \"invoice_status_str\":\"open-unpaid\",\n      \"invoice_status_state\":\"o\",\n
+        \     \"total\":500,\n      \"credits\":0,\n      \"payments\":0,\n      \"sum_base\":500,\n
+        \     \"sum_usage\":0,\n      \"sum_onetime\":0,\n      \"is_paid\":false,\n
+        \     \"balance\":500,\n      \"is_void\":false,\n      \"due_date\":\"2015-04-19\",\n
+        \     \"terms_name\":\"Net 30\",\n      \"terms_days\":30,\n      \"days_overdue\":0,\n
+        \     \"is_overdue\":false,\n      \"date\":\"2015-03-20\",\n      \"delay_datetime\":null,\n
+        \     \"bill_block\":\"\",\n      \"ship_block\":\"\",\n      \"url_permalink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/view\\/by08pf5i6lkj\",\n
+        \     \"url_paylink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/trans\\/pay\\/by08pf5i6lkj\",\n
+        \     \"url_pdflink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/invoice\\/pdf\\/by08pf5i6lkj\",\n
+        \     \"package_id\":557,\n      \"customer_id\":1\n    }\n  ]\n}"
+    http_version: 
+  recorded_at: Mon, 23 Mar 2015 16:04:22 GMT
+recorded_with: VCR 2.9.3

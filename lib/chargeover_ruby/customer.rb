@@ -55,10 +55,11 @@ module Chargeover
                   :currency_iso4217,
                   :ship_block,
                   :bill_block,
+                  :superuser_username,
                   :tags
 
     def self.destroy(customer_id)
-      response = delete(base_url + "/#{customer_id}")
+      delete(base_url + "/#{customer_id}")
     end
 
     def update_attributes(attributes)
@@ -68,6 +69,19 @@ module Chargeover
 
     def recurring_packages
       RecurringPackage.find_all_by_customer_id(self.customer_id)
+    end
+
+    def invoices(sort = '', options = [])
+      Invoice.find_all_by_customer_id(self.customer_id, sort, options)
+    end
+
+    def latest_invoice
+      invoices = Invoice.find_all_by_customer_id(self.customer_id, "invoice_date:DESC")
+      invoices.first
+    end
+
+    def contacts
+      Contact.find_all_by_customer_id(self.customer_id)
     end
 
 private

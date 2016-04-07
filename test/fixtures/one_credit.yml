@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction/79
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 17:24:53 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '698'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"transaction_id\":79,\n    \"gateway_id\":100,\n    \"currency_id\":1,\n
+        \   \"token\":\"ne0f7m81lyp9\",\n    \"transaction_date\":\"2015-03-25\",\n
+        \   \"gateway_status\":1,\n    \"gateway_transid\":\"Manual credit\",\n    \"gateway_msg\":\"\",\n
+        \   \"amount\":10,\n    \"fee\":0,\n    \"transaction_type\":\"cre\",\n    \"transaction_method\":\"Credit\",\n
+        \   \"transaction_detail\":null,\n    \"transaction_datetime\":\"2015-03-25
+        11:26:39\",\n    \"void_datetime\":null,\n    \"transaction_type_name\":\"Credit\",\n
+        \   \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n    \"customer_id\":20,\n
+        \   \"applied_to\":[\n      {\n        \"invoice_id\":\"10022\",\n        \"applied\":10\n
+        \     }\n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 17:25:01 GMT
+recorded_with: VCR 2.9.3

@@ -22,11 +22,36 @@ module Chargeover
       end
 
       def all
-        response = get(base_url)
+        limit = 100
+        offset = 0
         objs = []
-        response.each do |obj|
-          objs << new(obj)
+
+        response = get(base_url + "?limit=#{limit}&offset=#{offset}")
+
+        while response.length > 0
+          objs = []
+          response.each do |obj|
+            objs << new(obj)
+          end
+          offset += 100
+          response = get(base_url + "?limit=#{limit}&offset=#{offset}")
         end
+
+        objs
+      end
+
+      def query(options = [], offset = 0, limit = 100, sort = '')
+        objs = []
+
+        url = build_query(options, offset, limit, sort)
+        url = build_query(options, offset, limit, sort)
+
+        response = get(url)
+
+        response.each do |obj|
+            objs << new(obj)
+        end
+
         objs
       end
 
@@ -36,80 +61,19 @@ module Chargeover
       end
 
       def get(url)
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.get
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+        request :get, url
       end
 
-      def post(url, payload)
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.post do |req|
-          req.headers['Content-Type'] = 'application/json'
-          req.body = payload.to_json
-        end
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-        attributes['response']
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+      def post(url, payload = {})
+        request :post, url, payload
       end
 
       def put(url, payload)
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.put do |req|
-          req.headers['Content-Type'] = 'application/json'
-          req.body = payload.to_json
-        end
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-        attributes['response']
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+        request :put, url, payload
       end
 
       def delete(url)
-        conn = Faraday.new(url)
-        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
-        response = conn.delete
-
-        # handle server down errors without parsing the response body
-        raise_error(response.status) if response.status == 500
-
-        attributes = JSON.parse(response.body)
-        attributes['response']
-
-        if successful_response?(response)
-          attributes['response']
-        else
-          raise_error(response.status, attributes['message'])
-        end
+        request :delete, url
       end
 
       def successful_response?(response)
@@ -121,16 +85,56 @@ module Chargeover
       def raise_error(status, message = nil)
         raise ChargeoverException.new(status, message)
       end
+
+      private
+
+      def request(method, url, payload={})
+        conn = Faraday.new(url)
+        conn.basic_auth(Chargeover.public_key, Chargeover.private_key)
+        response = conn.send(method) do |req|
+          req.headers['Content-Type'] = 'application/json'
+          req.body = payload.to_json unless payload.empty?
+        end
+
+        # handle server down errors without parsing the response body
+        raise_error(response.status) if response.status == 500
+
+        attributes = JSON.parse(response.body)
+
+        if successful_response?(response)
+          attributes['response']
+        else
+          raise_error(response.status, attributes['message'])
+        end
+      end
+
+      def build_query(options, offset = 0, limit = 100, sort = '')
+        query = "?where=#{options.map{ |option| "#{option[:field].to_s.downcase}:#{option[:operator].to_s.upcase}:#{option[:value]}"}.join(',')}"
+
+        if sort.length > 0
+          query += '&order=' + sort
+        end
+
+        query += "&limit=#{limit}&offset=#{offset}"
+        base_url + query
+      end
+
     end
 
     def initialize(attributes)
       attributes.each_key do |attribute|
-        if attribute.end_with?('datetime')
-          if attributes[attribute] != nil
-            send("#{attribute}=", DateTime.parse(attributes[attribute]))
+
+        method_name = "#{attribute}="
+        value = attributes[attribute]
+
+        if self.respond_to?(method_name, true)
+          if attribute.end_with?('datetime') || attribute == 'date'
+            if value != nil && value.length > 0
+              send(method_name, DateTime.parse(value))
+            end
+         else
+          send(method_name, value)
           end
-        else
-          send("#{attribute}=", attributes[attribute])
         end
       end
     end
@@ -141,6 +145,10 @@ module Chargeover
 
     def put(url, payload)
       Chargeover::Resource.put(url, payload)
+    end
+
+    def post(url, payload = {})
+      Chargeover::Resource.post(url, payload)
     end
 
   end

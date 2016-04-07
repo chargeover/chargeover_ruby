@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user/398
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 19:15:42 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '584'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"user_id\":398,\n    \"external_key\":null,\n    \"first_name\":\"Jane\",\n
+        \   \"middle_name_glob\":null,\n    \"last_name\":\"Smith\",\n    \"name_suffix\":null,\n
+        \   \"title\":\"\",\n    \"email\":\"jane@example.com\",\n    \"token\":\"jozw31nc567e\",\n
+        \   \"phone\":\"\",\n    \"write_datetime\":\"2015-04-09 13:32:33\",\n    \"mod_datetime\":\"2015-04-09
+        14:14:35\",\n    \"name\":\"Jane Smith\",\n    \"display_as\":\"Jane Smith\",\n
+        \   \"username\":\"7gpkozcywa54\",\n    \"customers\":[\n      {\n        \"customer_id\":\"44\",\n
+        \       \"company\":\"IR Free Signup\"\n      }\n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:15:47 GMT
+- request:
+    method: put
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user/398
+    body:
+      encoding: UTF-8
+      string: ! '{"name":"Jane Doe","email":"j@example.com"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 19:15:42 GMT
+      Server:
+      - Apache
+      Location:
+      - https://imagerelay-staging.chargeover.com/api/v3/user/398
+      Content-Length:
+      - '82'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":202,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"id\":398\n  }\n}"
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:15:47 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user/398
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 19:15:43 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '575'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"user_id\":398,\n    \"external_key\":null,\n    \"first_name\":\"Jane\",\n
+        \   \"middle_name_glob\":null,\n    \"last_name\":\"Doe\",\n    \"name_suffix\":null,\n
+        \   \"title\":\"\",\n    \"email\":\"j@example.com\",\n    \"token\":\"jozw31nc567e\",\n
+        \   \"phone\":\"\",\n    \"write_datetime\":\"2015-04-09 13:32:33\",\n    \"mod_datetime\":\"2015-04-09
+        14:15:43\",\n    \"name\":\"Jane Doe\",\n    \"display_as\":\"Jane Doe\",\n
+        \   \"username\":\"7gpkozcywa54\",\n    \"customers\":[\n      {\n        \"customer_id\":\"44\",\n
+        \       \"company\":\"IR Free Signup\"\n      }\n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:15:48 GMT
+recorded_with: VCR 2.9.3

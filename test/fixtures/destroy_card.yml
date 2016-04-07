@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/creditcard?where=customer_id:EQUALS:44
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 10 Apr 2015 16:57:49 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '502'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   {\n      \"creditcard_id\":66,\n      \"external_key\":null,\n      \"type\":\"visa\",\n
+        \     \"token\":\"ipau281feoql\",\n      \"expdate\":\"2018-05-01\",\n      \"write_datetime\":\"2015-04-10
+        11:43:49\",\n      \"write_ipaddr\":\"70.88.244.230\",\n      \"mask_number\":\"xxxx-xxxx-xxxx-4242\",\n
+        \     \"name\":\"\",\n      \"expdate_month\":\"5\",\n      \"expdate_year\":\"2018\",\n
+        \     \"expdate_formatted\":\"May 2018\",\n      \"type_name\":\"Visa\",\n
+        \     \"customer_id\":44\n    }\n  ]\n}"
+    http_version: 
+  recorded_at: Fri, 10 Apr 2015 16:57:56 GMT
+- request:
+    method: delete
+    uri: https://imagerelay-staging.chargeover.com/api/v3/creditcard/66
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 10 Apr 2015 16:57:49 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '68'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":true\n}"
+    http_version: 
+  recorded_at: Fri, 10 Apr 2015 16:57:56 GMT
+recorded_with: VCR 2.9.3

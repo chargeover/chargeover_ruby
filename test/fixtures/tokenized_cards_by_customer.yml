@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/customer/51
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Apr 2015 17:54:41 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '1575'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"superuser_id\":405,\n    \"external_key\":\"115\",\n    \"token\":\"bmqptn7voijc\",\n
+        \   \"company\":\"IR Free Signup\",\n    \"bill_addr1\":null,\n    \"bill_addr2\":null,\n
+        \   \"bill_addr3\":null,\n    \"bill_city\":null,\n    \"bill_state\":null,\n
+        \   \"bill_postcode\":null,\n    \"bill_country\":null,\n    \"bill_notes\":null,\n
+        \   \"ship_addr1\":null,\n    \"ship_addr2\":null,\n    \"ship_addr3\":null,\n
+        \   \"ship_city\":null,\n    \"ship_state\":null,\n    \"ship_postcode\":null,\n
+        \   \"ship_country\":null,\n    \"ship_notes\":null,\n    \"terms_id\":2,\n
+        \   \"class_id\":null,\n    \"custom_1\":null,\n    \"custom_2\":\"http:\\/\\/freedev.lvh.me:3000\",\n
+        \   \"custom_3\":null,\n    \"admin_id\":null,\n    \"campaign_id\":null,\n
+        \   \"custtype_id\":null,\n    \"currency_id\":1,\n    \"no_taxes\":false,\n
+        \   \"no_dunning\":false,\n    \"write_datetime\":\"2015-04-15 11:53:24\",\n
+        \   \"write_ipaddr\":\"70.88.244.230\",\n    \"mod_datetime\":\"2015-04-15
+        11:53:24\",\n    \"mod_ipaddr\":\"70.88.244.230\",\n    \"terms_name\":\"Net
+        30\",\n    \"terms_days\":30,\n    \"paid\":0,\n    \"total\":0,\n    \"balance\":0,\n
+        \   \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/bmqptn7voijc\",\n
+        \   \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n    \"display_as\":\"IR
+        Free Signup\",\n    \"ship_block\":\"\",\n    \"bill_block\":\"\",\n    \"superuser_name\":\"Buffy
+        Miller\",\n    \"superuser_first_name\":\"Buffy\",\n    \"superuser_last_name\":\"Miller\",\n
+        \   \"superuser_phone\":\"\",\n    \"superuser_email\":\"buffy@imagerelay.com\",\n
+        \   \"customer_id\":51,\n    \"superuser_username\":\"rmnpjqzi5byo\",\n    \"tags\":[\n
+        \     \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Wed, 15 Apr 2015 17:54:53 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/tokenized?where=customer_id:EQUALS:51
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Apr 2015 17:54:42 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '189'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   {\n      \"tokenized_id\":4,\n      \"type\":\"customer\",\n      \"token\":\"cus_1VaBhFLLOXwmnI\",\n
+        \     \"customer_id\":51\n    }\n  ]\n}"
+    http_version: 
+  recorded_at: Wed, 15 Apr 2015 17:54:53 GMT
+recorded_with: VCR 2.9.3

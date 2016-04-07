@@ -1,0 +1,151 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction/131
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 May 2015 18:33:01 GMT
+      Server:
+      - Apache
+      X-Chargeover-Sandbox:
+      - '0'
+      X-Chargeover-Env:
+      - ! '?'
+      X-Chargeover-Account:
+      - be28f27091ae27759f6e32f79616aa11
+      X-Chargeover-Admin:
+      - '0'
+      X-Chargeover-User:
+      - '0'
+      Content-Length:
+      - '774'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"transaction_id\":131,\n    \"gateway_id\":202,\n    \"currency_id\":1,\n
+        \   \"external_key\":null,\n    \"token\":\"k8lp4ynu6qxf\",\n    \"transaction_date\":\"2015-04-16\",\n
+        \   \"gateway_status\":1,\n    \"gateway_transid\":\"ch_64KiLIepjiKFAw\",\n
+        \   \"gateway_msg\":\"\",\n    \"amount\":99,\n    \"fee\":-3.17,\n    \"transaction_type\":\"pay\",\n
+        \   \"transaction_method\":\"Visa\",\n    \"transaction_detail\":\"x4242\",\n
+        \   \"transaction_datetime\":\"2015-04-16 07:24:38\",\n    \"transaction_ipaddr\":\"70.88.244.230\",\n
+        \   \"void_datetime\":null,\n    \"transaction_type_name\":\"Payment\",\n
+        \   \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n    \"customer_id\":58,\n
+        \   \"applied_to\":[\n      {\n        \"invoice_id\":10090,\n        \"applied\":99\n
+        \     }\n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 05 May 2015 18:33:15 GMT
+- request:
+    method: post
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction/131?action=refund
+    body:
+      encoding: UTF-8
+      string: ! '{"amount":10.0}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 May 2015 18:33:02 GMT
+      Server:
+      - Apache
+      X-Chargeover-Sandbox:
+      - '0'
+      X-Chargeover-Env:
+      - ! '?'
+      X-Chargeover-Account:
+      - be28f27091ae27759f6e32f79616aa11
+      X-Chargeover-Admin:
+      - '0'
+      X-Chargeover-User:
+      - '0'
+      Content-Length:
+      - '84'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"id\":\"158\"\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 05 May 2015 18:33:17 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction/158
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 May 2015 18:33:04 GMT
+      Server:
+      - Apache
+      X-Chargeover-Sandbox:
+      - '0'
+      X-Chargeover-Env:
+      - ! '?'
+      X-Chargeover-Account:
+      - be28f27091ae27759f6e32f79616aa11
+      X-Chargeover-Admin:
+      - '0'
+      X-Chargeover-User:
+      - '0'
+      Content-Length:
+      - '771'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"transaction_id\":158,\n    \"gateway_id\":202,\n    \"currency_id\":1,\n
+        \   \"external_key\":null,\n    \"token\":\"18aytusl47px\",\n    \"transaction_date\":\"2015-05-05\",\n
+        \   \"gateway_status\":1,\n    \"gateway_transid\":\"ch_64KiLIepjiKFAw\",\n
+        \   \"gateway_msg\":\"\",\n    \"amount\":-10,\n    \"fee\":0,\n    \"transaction_type\":\"ref\",\n
+        \   \"transaction_method\":\"Visa\",\n    \"transaction_detail\":\"x4242\",\n
+        \   \"transaction_datetime\":\"2015-05-05 13:33:04\",\n    \"transaction_ipaddr\":\"70.88.244.230\",\n
+        \   \"void_datetime\":null,\n    \"transaction_type_name\":\"Refund\",\n    \"currency_symbol\":\"$\",\n
+        \   \"currency_iso4217\":\"USD\",\n    \"customer_id\":58,\n    \"applied_to\":[\n
+        \     {\n        \"invoice_id\":10090,\n        \"applied\":-10\n      }\n
+        \   ]\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 05 May 2015 18:33:18 GMT
+recorded_with: VCR 2.9.3

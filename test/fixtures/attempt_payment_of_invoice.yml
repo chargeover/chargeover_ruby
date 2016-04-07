@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction?action=pay
+    body:
+      encoding: UTF-8
+      string: ! '{"customer_id":35,"applied_to":["10064"]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 13 May 2015 14:48:01 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains
+      Content-Length:
+      - '101'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\":
+        \"\",\n    \"response\": {\n        \"id\": 170\n    }\n}"
+    http_version: 
+  recorded_at: Wed, 13 May 2015 14:48:03 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction/170
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 13 May 2015 14:48:03 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains
+      Content-Length:
+      - '955'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\":
+        \"\",\n    \"response\": {\n        \"transaction_id\": 170,\n        \"gateway_id\":
+        202,\n        \"currency_id\": 1,\n        \"external_key\": null,\n        \"token\":
+        \"7ufq2b6y3pxn\",\n        \"transaction_date\": \"2015-05-13\",\n        \"gateway_status\":
+        1,\n        \"gateway_transid\": \"ch_6EU71oTo9YjhmO\",\n        \"gateway_msg\":
+        \"\",\n        \"amount\": 4500,\n        \"fee\": -130.8,\n        \"transaction_type\":
+        \"pay\",\n        \"transaction_method\": \"Tokenized\",\n        \"transaction_detail\":
+        \"cus_1CoGUjtUMyLIDR\",\n        \"transaction_datetime\": \"2015-05-13 09:48:03\",\n
+        \       \"transaction_ipaddr\": \"70.88.244.230\",\n        \"void_datetime\":
+        null,\n        \"transaction_type_name\": \"Payment\",\n        \"currency_symbol\":
+        \"$\",\n        \"currency_iso4217\": \"USD\",\n        \"customer_id\": 35,\n
+        \       \"applied_to\": [\n            {\n                \"invoice_id\":
+        10064,\n                \"applied\": 4500\n            }\n        ]\n    }\n}"
+    http_version: 
+  recorded_at: Wed, 13 May 2015 14:48:03 GMT
+recorded_with: VCR 2.9.3

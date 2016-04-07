@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user/395
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 18:44:07 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '628'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"user_id\":395,\n    \"external_key\":null,\n    \"first_name\":\"Accounts\",\n
+        \   \"middle_name_glob\":null,\n    \"last_name\":\"Payable\",\n    \"name_suffix\":null,\n
+        \   \"title\":\"\",\n    \"email\":\"accountspayable@example.com\",\n    \"token\":\"7h4it9dxr0km\",\n
+        \   \"phone\":\"\",\n    \"write_datetime\":\"2015-04-06 12:37:05\",\n    \"mod_datetime\":\"2015-04-06
+        12:37:05\",\n    \"name\":\"Accounts Payable\",\n    \"display_as\":\"Accounts
+        Payable\",\n    \"username\":\"accountspayable@example.com\",\n    \"customers\":[\n
+        \     {\n        \"customer_id\":\"44\",\n        \"company\":\"IR Free Signup\"\n
+        \     }\n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 18:44:11 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/customer/44
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 18:44:08 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '1632'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"superuser_id\":394,\n    \"external_key\":\"115\",\n    \"token\":\"7e6wgvzoflyt\",\n
+        \   \"company\":\"IR Free Signup\",\n    \"bill_addr1\":\"144 Ross Hill\",\n
+        \   \"bill_addr2\":null,\n    \"bill_addr3\":null,\n    \"bill_city\":\"Huntington\",\n
+        \   \"bill_state\":\"Vermont\",\n    \"bill_postcode\":\"05462\",\n    \"bill_country\":\"United
+        States\",\n    \"bill_notes\":null,\n    \"ship_addr1\":null,\n    \"ship_addr2\":null,\n
+        \   \"ship_addr3\":null,\n    \"ship_city\":null,\n    \"ship_state\":null,\n
+        \   \"ship_postcode\":null,\n    \"ship_country\":null,\n    \"ship_notes\":null,\n
+        \   \"terms_id\":2,\n    \"class_id\":null,\n    \"custom_1\":null,\n    \"custom_2\":\"http:\\/\\/freedev.lvh.me:3000\",\n
+        \   \"custom_3\":null,\n    \"admin_id\":null,\n    \"campaign_id\":null,\n
+        \   \"custtype_id\":null,\n    \"currency_id\":1,\n    \"no_taxes\":false,\n
+        \   \"no_dunning\":false,\n    \"write_datetime\":\"2015-04-06 10:40:41\",\n
+        \   \"write_ipaddr\":\"70.88.244.230\",\n    \"mod_datetime\":\"2015-04-06
+        10:40:41\",\n    \"mod_ipaddr\":\"70.88.244.230\",\n    \"terms_name\":\"Net
+        30\",\n    \"terms_days\":30,\n    \"paid\":0,\n    \"total\":1908,\n    \"balance\":1908,\n
+        \   \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/7e6wgvzoflyt\",\n
+        \   \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n    \"display_as\":\"IR
+        Free Signup\",\n    \"ship_block\":\"\",\n    \"bill_block\":\"144 Ross Hill\\nHuntington
+        Vermont 05462\\nUnited States\",\n    \"superuser_name\":\"Buffy Miller\",\n
+        \   \"superuser_first_name\":\"Buffy\",\n    \"superuser_last_name\":\"Miller\",\n
+        \   \"superuser_phone\":\"\",\n    \"superuser_email\":\"buffy@imagerelay.com\",\n
+        \   \"customer_id\":44,\n    \"tags\":[\n      \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 18:44:12 GMT
+recorded_with: VCR 2.9.3

@@ -55,13 +55,66 @@ module Chargeover
         :url_pdflink,
         :package_id,
         :customer_id,
-        :line_items
+        :line_items,
+        :void_datetime,
+        :subtotal,
+        :taxes
 
+
+    def self.find_all_by_customer_id(customer_id, sort = '', options = [], limit = 100, offset = 0)
+      options << { field: 'customer_id', operator: 'EQUALS', value: customer_id }
+      url = build_query(options, offset, limit, sort)
+
+      response = get(url)
+      invoices = []
+      response.each do |invoice|
+        invoices << new(invoice)
+      end
+      invoices
+    end
+
+    def self.find_all_by_package_id(package_id, sort = '', options = [], limit = 100, offset = 0)
+      options << { field: 'package_id', operator: 'EQUALS', value: package_id}
+
+      url = build_query(options, offset, limit, sort)
+
+      response = get(url)
+      invoices = []
+      response.each do |invoice|
+        invoices << new(invoice)
+      end
+      invoices
+    end
+
+    def void
+      post(base_url + "/#{self.invoice_id}?action=void")
+    end
+
+    def send_email(options = {})
+      post(base_url + "/#{self.invoice_id}?action=email", options)
+    end
+
+    def customer
+      @customer ||= Chargeover::Customer.find(self.customer_id)
+    end
+
+    def recurring_package
+      unless @recurring_package
+        if self.package_id && self.package_id.to_s.length > 0
+          @recurring_package = Chargeover::RecurringPackage.find(self.package_id)
+        end
+      end
+      @recurring_package
+    end
+
+    def attempt_payment(amount = nil)
+      Chargeover::Transaction.attempt_payment(self.customer_id, [ self.invoice_id ], amount)
+    end
 
 private
 
     attr_writer :write_datetime
+
+
   end
-
-
 end

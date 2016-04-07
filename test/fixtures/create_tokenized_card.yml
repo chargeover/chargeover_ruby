@@ -1,0 +1,122 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/customer/35
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Apr 2015 20:15:08 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '1661'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"superuser_id\":385,\n    \"external_key\":null,\n    \"token\":\"60qtgay5mfuw\",\n
+        \   \"company\":\"Test Customer\",\n    \"bill_addr1\":\"144 Ross Hill\",\n
+        \   \"bill_addr2\":null,\n    \"bill_addr3\":null,\n    \"bill_city\":\"Huntington\",\n
+        \   \"bill_state\":\"Vermont\",\n    \"bill_postcode\":\"05462\",\n    \"bill_country\":\"United
+        States\",\n    \"bill_notes\":null,\n    \"ship_addr1\":null,\n    \"ship_addr2\":null,\n
+        \   \"ship_addr3\":null,\n    \"ship_city\":null,\n    \"ship_state\":null,\n
+        \   \"ship_postcode\":null,\n    \"ship_country\":null,\n    \"ship_notes\":null,\n
+        \   \"terms_id\":2,\n    \"class_id\":null,\n    \"custom_1\":null,\n    \"custom_2\":null,\n
+        \   \"custom_3\":null,\n    \"admin_id\":3,\n    \"campaign_id\":null,\n    \"custtype_id\":null,\n
+        \   \"currency_id\":1,\n    \"no_taxes\":false,\n    \"no_dunning\":false,\n
+        \   \"write_datetime\":\"2015-03-31 11:24:48\",\n    \"write_ipaddr\":\"70.88.244.230\",\n
+        \   \"mod_datetime\":\"2015-03-31 11:24:48\",\n    \"mod_ipaddr\":\"70.88.244.230\",\n
+        \   \"terms_name\":\"Net 30\",\n    \"terms_days\":30,\n    \"paid\":0,\n
+        \   \"total\":11174.82,\n    \"balance\":11174.82,\n    \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/60qtgay5mfuw\",\n
+        \   \"currency_symbol\":\"$\",\n    \"currency_iso4217\":\"USD\",\n    \"display_as\":\"Test
+        Customer\",\n    \"ship_block\":\"\",\n    \"bill_block\":\"144 Ross Hill\\nHuntington
+        Vermont 05462\\nUnited States\",\n    \"superuser_name\":\"Test Customer\",\n
+        \   \"superuser_first_name\":\"Test\",\n    \"superuser_last_name\":\"Customer\",\n
+        \   \"superuser_phone\":\"8025984963\",\n    \"superuser_email\":\"buffy@imagerelay.com\",\n
+        \   \"customer_id\":35,\n    \"superuser_username\":\"ZMGsYQdi5IwL\",\n    \"tags\":[\n
+        \     \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 14 Apr 2015 20:15:21 GMT
+- request:
+    method: post
+    uri: https://imagerelay-staging.chargeover.com/api/v3/tokenized
+    body:
+      encoding: UTF-8
+      string: ! '{"customer_id":35,"type":"customer","token":"cus_1CoGUjtUMyLIDR"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 14 Apr 2015 20:15:09 GMT
+      Server:
+      - Apache
+      Location:
+      - https://imagerelay-staging.chargeover.com/api/v3/tokenized/1
+      Content-Length:
+      - '80'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":201,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"id\":1\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 14 Apr 2015 20:15:22 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/tokenized/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Apr 2015 20:15:10 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '169'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"tokenized_id\":1,\n    \"type\":\"customer\",\n    \"token\":\"cus_1CoGUjtUMyLIDR\",\n
+        \   \"customer_id\":35\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 14 Apr 2015 20:15:22 GMT
+recorded_with: VCR 2.9.3

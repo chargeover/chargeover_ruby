@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction
+    body:
+      encoding: UTF-8
+      string: ! '{"customer_id":18,"transaction_type":"cre","gateway_method":"credit","amount":"42.50","gateway_status":1,"gateway_transid":"API
+        Credit","transaction_detail":"Credit for unused Image Relay Small"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 17:37:31 GMT
+      Server:
+      - Apache
+      Location:
+      - https://imagerelay-staging.chargeover.com/api/v3/transaction/96
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":201,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"id\":96\n  }\n}"
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 17:37:39 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/transaction/96
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 17:37:32 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '668'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":{\n
+        \   \"transaction_id\":96,\n    \"gateway_id\":205,\n    \"currency_id\":1,\n
+        \   \"token\":\"h7pc94q52abj\",\n    \"transaction_date\":\"2015-03-25\",\n
+        \   \"gateway_status\":1,\n    \"gateway_transid\":\"API Credit\",\n    \"gateway_msg\":\"\",\n
+        \   \"amount\":42.5,\n    \"fee\":0,\n    \"transaction_type\":\"cre\",\n
+        \   \"transaction_method\":\"Credits\",\n    \"transaction_detail\":\"Credit
+        for unused Image Relay Sm\",\n    \"transaction_datetime\":\"2015-03-25 12:37:32\",\n
+        \   \"void_datetime\":null,\n    \"transaction_type_name\":\"Credit\",\n    \"currency_symbol\":\"$\",\n
+        \   \"currency_iso4217\":\"USD\",\n    \"customer_id\":18,\n    \"applied_to\":[\n
+        \     \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 17:37:40 GMT
+recorded_with: VCR 2.9.3

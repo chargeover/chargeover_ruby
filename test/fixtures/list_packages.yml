@@ -1,0 +1,560 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/package?limit=100&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 17:53:13 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   {\n      \"terms_id\":3,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"aqpgj7wosu2f\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-19
+        11:52:12\",\n      \"mod_datetime\":\"2015-03-19 11:52:12\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:26\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":554,\n
+        \     \"customer_id\":1,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"38n5jqdv6ifu\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":\"\",\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-19
+        12:45:07\",\n      \"mod_datetime\":\"2015-03-24 09:00:50\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:29\",\n      \"holduntil_datetime\":\"2015-03-26 00:00:00\",\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"2015-03-26 00:00:00\",\n
+        \     \"package_id\":555,\n      \"customer_id\":4,\n      \"package_status_id\":5,\n
+        \     \"package_status_name\":\"Canceled manually\",\n      \"package_status_str\":\"canceled-manual\",\n
+        \     \"package_status_state\":\"c\"\n    },\n    {\n      \"terms_id\":2,\n
+        \     \"currency_id\":1,\n      \"external_key\":null,\n      \"token\":\"h48xvae0utor\",\n
+        \     \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n      \"paycycle\":\"mon\",\n
+        \     \"bill_addr1\":null,\n      \"bill_addr2\":null,\n      \"bill_addr3\":null,\n
+        \     \"bill_city\":null,\n      \"bill_state\":null,\n      \"bill_postcode\":null,\n
+        \     \"bill_country\":null,\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"creditcard_id\":null,\n      \"ach_id\":null,\n
+        \     \"tokenized_id\":null,\n      \"custom_1\":\"My PO Num\",\n      \"custom_2\":null,\n
+        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-19 14:36:11\",\n
+        \     \"mod_datetime\":\"2015-03-19 14:36:11\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:31\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":556,\n
+        \     \"customer_id\":5,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"rixbv4ketoyj\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        12:47:27\",\n      \"mod_datetime\":\"2015-03-20 12:47:27\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:27\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":557,\n
+        \     \"customer_id\":1,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"4uqdf932as8z\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":38,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        14:09:52\",\n      \"mod_datetime\":\"2015-03-20 14:09:52\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:34\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":558,\n
+        \     \"customer_id\":6,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"dwhvzx8k0i7p\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"yrl\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        14:29:22\",\n      \"mod_datetime\":\"2015-03-20 14:29:22\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:35\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":559,\n
+        \     \"customer_id\":6,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"8zfunpkis17y\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"yrl\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        14:32:48\",\n      \"mod_datetime\":\"2015-03-20 14:32:48\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:37\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":560,\n
+        \     \"customer_id\":7,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"ke0iuo6tj9ng\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"yrl\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        14:35:55\",\n      \"mod_datetime\":\"2015-03-20 14:35:55\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:39\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":561,\n
+        \     \"customer_id\":8,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"oexp25vc319l\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"yrl\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":39,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        14:52:58\",\n      \"mod_datetime\":\"2015-03-20 14:52:58\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:40\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":562,\n
+        \     \"customer_id\":8,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"pd3yv2g8ot0m\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":40,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-20
+        14:55:42\",\n      \"mod_datetime\":\"2015-03-20 14:55:42\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:41\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":563,\n
+        \     \"customer_id\":9,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"n9xtblgvs1ck\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-23
+        08:44:30\",\n      \"mod_datetime\":\"2015-03-23 08:44:30\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:32\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":564,\n
+        \     \"customer_id\":5,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"casvwedyb82z\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":41,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-23
+        09:16:00\",\n      \"mod_datetime\":\"2015-03-23 09:16:00\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:43\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":565,\n
+        \     \"customer_id\":10,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"i60ruk3tse52\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"yrl\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":45,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":\"\",\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-23
+        09:16:55\",\n      \"mod_datetime\":\"2015-03-23 12:52:09\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:45\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":566,\n
+        \     \"customer_id\":11,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"3u4awq5kljyg\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":46,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-23
+        13:05:44\",\n      \"mod_datetime\":\"2015-03-23 13:05:44\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:02:47\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":567,\n
+        \     \"customer_id\":12,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"4luvmype1bjc\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":47,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-23
+        13:14:35\",\n      \"mod_datetime\":\"2015-03-23 13:14:35\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:04:35\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":99,\n      \"amount_invoiced\":99,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":568,\n
+        \     \"customer_id\":13,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"tr2juvqp8mbc\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":48,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":\"\",\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-23
+        13:16:38\",\n      \"mod_datetime\":\"2015-03-23 13:37:05\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:04:44\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":99,\n      \"amount_invoiced\":99,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":569,\n
+        \     \"customer_id\":14,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"hareqowkfbvc\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"qtr\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-24
+        07:24:47\",\n      \"mod_datetime\":\"2015-03-24 07:24:47\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        15:04:18\",\n      \"holduntil_datetime\":\"2015-04-01 00:00:00\",\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":null,\n      \"package_id\":570,\n
+        \     \"customer_id\":15,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"zwh4lkxi0ce3\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"qtr\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":\"123\",\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-24
+        07:41:02\",\n      \"mod_datetime\":\"2015-03-24 07:41:02\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-24
+        14:52:40\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":0,\n      \"amount_invoiced\":0,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":571,\n
+        \     \"customer_id\":16,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"hofxjw5m8lbr\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":50,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25
+        08:25:10\",\n      \"mod_datetime\":\"2015-03-25 08:25:10\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-25
+        12:32:26\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":99,\n      \"amount_invoiced\":99,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":572,\n
+        \     \"customer_id\":18,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"gu4xky2qj3ef\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":51,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25
+        08:34:43\",\n      \"mod_datetime\":\"2015-03-25 08:34:43\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-25
+        11:50:16\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":99,\n      \"amount_invoiced\":99,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":573,\n
+        \     \"customer_id\":19,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":3,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"4l1cy3ufdi7s\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":52,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":\"\",\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25
+        08:45:55\",\n      \"mod_datetime\":\"2015-03-25 11:19:29\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-25
+        11:31:37\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":99,\n      \"amount_invoiced\":99,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":574,\n
+        \     \"customer_id\":20,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":3,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"4mwydfhc0t6e\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":53,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25
+        08:51:14\",\n      \"mod_datetime\":\"2015-03-25 08:51:14\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-25
+        12:16:26\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":99,\n      \"amount_invoiced\":99,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":575,\n
+        \     \"customer_id\":21,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":3,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"jn48g7r0ou3p\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":54,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25
+        08:52:51\",\n      \"mod_datetime\":\"2015-03-25 08:52:51\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":null,\n      \"holduntil_datetime\":null,\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"amount_collected\":99,\n
+        \     \"amount_invoiced\":99,\n      \"amount_due\":0,\n      \"next_invoice_datetime\":\"2015-04-25
+        00:00:01\",\n      \"package_id\":576,\n      \"customer_id\":22,\n      \"package_status_id\":2,\n
+        \     \"package_status_name\":\"Current\",\n      \"package_status_str\":\"active-current\",\n
+        \     \"package_status_state\":\"a\"\n    },\n    {\n      \"terms_id\":2,\n
+        \     \"currency_id\":1,\n      \"external_key\":null,\n      \"token\":\"semn62jvyp3t\",\n
+        \     \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n      \"paycycle\":\"mon\",\n
+        \     \"bill_addr1\":null,\n      \"bill_addr2\":null,\n      \"bill_addr3\":null,\n
+        \     \"bill_city\":null,\n      \"bill_state\":null,\n      \"bill_postcode\":null,\n
+        \     \"bill_country\":null,\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"creditcard_id\":52,\n      \"ach_id\":null,\n
+        \     \"tokenized_id\":null,\n      \"custom_1\":null,\n      \"custom_2\":null,\n
+        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25 11:34:56\",\n
+        \     \"mod_datetime\":\"2015-03-25 11:34:56\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":null,\n      \"holduntil_datetime\":null,\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"amount_collected\":500,\n
+        \     \"amount_invoiced\":500,\n      \"amount_due\":0,\n      \"next_invoice_datetime\":\"2015-04-25
+        00:00:01\",\n      \"package_id\":577,\n      \"customer_id\":20,\n      \"package_status_id\":2,\n
+        \     \"package_status_name\":\"Current\",\n      \"package_status_str\":\"active-current\",\n
+        \     \"package_status_state\":\"a\"\n    },\n    {\n      \"terms_id\":2,\n
+        \     \"currency_id\":1,\n      \"external_key\":null,\n      \"token\":\"4azb6w5rkquo\",\n
+        \     \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n      \"paycycle\":\"mon\",\n
+        \     \"bill_addr1\":null,\n      \"bill_addr2\":null,\n      \"bill_addr3\":null,\n
+        \     \"bill_city\":null,\n      \"bill_state\":null,\n      \"bill_postcode\":null,\n
+        \     \"bill_country\":null,\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"creditcard_id\":null,\n      \"ach_id\":null,\n
+        \     \"tokenized_id\":null,\n      \"custom_1\":null,\n      \"custom_2\":null,\n
+        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25 11:50:39\",\n
+        \     \"mod_datetime\":\"2015-03-25 11:50:39\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":null,\n      \"holduntil_datetime\":null,\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"amount_collected\":20,\n
+        \     \"amount_invoiced\":500,\n      \"amount_due\":480,\n      \"next_invoice_datetime\":\"2015-04-25
+        00:00:01\",\n      \"package_id\":578,\n      \"customer_id\":19,\n      \"package_status_id\":2,\n
+        \     \"package_status_name\":\"Current\",\n      \"package_status_str\":\"active-current\",\n
+        \     \"package_status_state\":\"a\"\n    },\n    {\n      \"terms_id\":2,\n
+        \     \"currency_id\":1,\n      \"external_key\":null,\n      \"token\":\"j562rsqet9f0\",\n
+        \     \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n      \"paycycle\":\"mon\",\n
+        \     \"bill_addr1\":null,\n      \"bill_addr2\":null,\n      \"bill_addr3\":null,\n
+        \     \"bill_city\":null,\n      \"bill_state\":null,\n      \"bill_postcode\":null,\n
+        \     \"bill_country\":null,\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"creditcard_id\":53,\n      \"ach_id\":null,\n
+        \     \"tokenized_id\":null,\n      \"custom_1\":null,\n      \"custom_2\":null,\n
+        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25 12:16:46\",\n
+        \     \"mod_datetime\":\"2015-03-25 12:16:46\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":null,\n      \"holduntil_datetime\":null,\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"amount_collected\":500,\n
+        \     \"amount_invoiced\":500,\n      \"amount_due\":0,\n      \"next_invoice_datetime\":\"2015-04-25
+        00:00:01\",\n      \"package_id\":579,\n      \"customer_id\":21,\n      \"package_status_id\":2,\n
+        \     \"package_status_name\":\"Current\",\n      \"package_status_str\":\"active-current\",\n
+        \     \"package_status_state\":\"a\"\n    },\n    {\n      \"terms_id\":2,\n
+        \     \"currency_id\":1,\n      \"external_key\":null,\n      \"token\":\"yx5ids819jwc\",\n
+        \     \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n      \"paycycle\":\"mon\",\n
+        \     \"bill_addr1\":null,\n      \"bill_addr2\":null,\n      \"bill_addr3\":null,\n
+        \     \"bill_city\":null,\n      \"bill_state\":null,\n      \"bill_postcode\":null,\n
+        \     \"bill_country\":null,\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"creditcard_id\":50,\n      \"ach_id\":null,\n
+        \     \"tokenized_id\":null,\n      \"custom_1\":null,\n      \"custom_2\":null,\n
+        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25 12:32:50\",\n
+        \     \"mod_datetime\":\"2015-03-25 12:32:50\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-25
+        12:34:49\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":500,\n      \"amount_invoiced\":500,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":580,\n
+        \     \"customer_id\":18,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"fecjxb1w7qzm\",\n      \"nickname\":\"\",\n      \"paymethod\":\"crd\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":50,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25
+        12:35:13\",\n      \"mod_datetime\":\"2015-03-25 12:35:13\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":\"2015-03-25
+        12:38:02\",\n      \"holduntil_datetime\":null,\n      \"currency_symbol\":\"$\",\n
+        \     \"currency_iso4217\":\"USD\",\n      \"amount_collected\":500,\n      \"amount_invoiced\":500,\n
+        \     \"amount_due\":0,\n      \"next_invoice_datetime\":\"\",\n      \"package_id\":581,\n
+        \     \"customer_id\":18,\n      \"package_status_id\":5,\n      \"package_status_name\":\"Canceled
+        manually\",\n      \"package_status_str\":\"canceled-manual\",\n      \"package_status_state\":\"c\"\n
+        \   },\n    {\n      \"terms_id\":2,\n      \"currency_id\":1,\n      \"external_key\":null,\n
+        \     \"token\":\"hd2rltay904j\",\n      \"nickname\":\"\",\n      \"paymethod\":\"inv\",\n
+        \     \"paycycle\":\"mon\",\n      \"bill_addr1\":null,\n      \"bill_addr2\":null,\n
+        \     \"bill_addr3\":null,\n      \"bill_city\":null,\n      \"bill_state\":null,\n
+        \     \"bill_postcode\":null,\n      \"bill_country\":null,\n      \"bill_notes\":null,\n
+        \     \"ship_addr1\":null,\n      \"ship_addr2\":null,\n      \"ship_addr3\":null,\n
+        \     \"ship_city\":null,\n      \"ship_state\":null,\n      \"ship_postcode\":null,\n
+        \     \"ship_country\":null,\n      \"ship_notes\":null,\n      \"creditcard_id\":null,\n
+        \     \"ach_id\":null,\n      \"tokenized_id\":null,\n      \"custom_1\":\"123\",\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-25
+        12:38:33\",\n      \"mod_datetime\":\"2015-03-25 12:38:33\",\n      \"suspendfrom_datetime\":null,\n
+        \     \"suspendto_datetime\":null,\n      \"cancel_datetime\":null,\n      \"holduntil_datetime\":null,\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"amount_collected\":42.5,\n
+        \     \"amount_invoiced\":500,\n      \"amount_due\":457.5,\n      \"next_invoice_datetime\":\"2015-04-25
+        00:00:01\",\n      \"package_id\":582,\n      \"customer_id\":18,\n      \"package_status_id\":2,\n
+        \     \"package_status_name\":\"Current\",\n      \"package_status_str\":\"active-current\",\n
+        \     \"package_status_state\":\"a\"\n    }\n  ]\n}"
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 17:53:22 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/package?limit=100&offset=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 17:53:14 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   \n  ]\n}"
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 17:53:22 GMT
+recorded_with: VCR 2.9.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://imagerelay-staging.chargeover.com/api/v3/item
+    uri: https://imagerelay-staging.chargeover.com/api/v3/item?limit=100&offset=0
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Mar 2015 16:39:18 GMT
+      - Wed, 25 Mar 2015 14:18:29 GMT
       Server:
       - Apache
       Content-Length:
-      - '4928'
+      - '5234'
       Content-Type:
       - application/json
     body:
@@ -42,58 +42,93 @@ http_interactions:
         10.00\",\n          \"percent_formatted\":\"0 %\",\n          \"pricemodel_desc\":\"Flat
         Pricing (e.g. $X dollars per month)\",\n          \"tiers\":[\n            \n
         \         ]\n        }\n      ]\n    },\n    {\n      \"item_id\":3,\n      \"item_type\":\"service\",\n
-        \     \"tierset_id\":5,\n      \"name\":\"Image Relay Big Plan\",\n      \"description\":\"\",\n
-        \     \"units\":null,\n      \"accounting_sku\":null,\n      \"external_key\":null,\n
-        \     \"token\":\"4xjplvwgunh2\",\n      \"custom_1\":null,\n      \"custom_2\":null,\n
-        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-17 13:37:39\",\n
-        \     \"mod_datetime\":\"2015-03-17 13:38:09\",\n      \"units_plural\":\"\",\n
-        \     \"tiersets\":[\n        {\n          \"tierset_id\":5,\n          \"setup\":0,\n
-        \         \"base\":500,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"evy\",\n
-        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-03-17
-        13:38:09\",\n          \"mod_datetime\":\"2015-03-17 13:38:09\",\n          \"setup_formatted\":\"$
-        0.00\",\n          \"base_formatted\":\"$ 500.00\",\n          \"percent_formatted\":\"0
-        %\",\n          \"pricemodel_desc\":\"Flat Pricing (e.g. $X dollars per month)\",\n
-        \         \"tiers\":[\n            \n          ]\n        }\n      ]\n    },\n
-        \   {\n      \"item_id\":4,\n      \"item_type\":\"service\",\n      \"tierset_id\":4,\n
-        \     \"name\":\"Image Relay Small Plan\",\n      \"description\":null,\n
-        \     \"units\":null,\n      \"accounting_sku\":null,\n      \"external_key\":null,\n
-        \     \"token\":\"i4k0u3wpt2zo\",\n      \"custom_1\":null,\n      \"custom_2\":null,\n
-        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-17 13:37:58\",\n
-        \     \"mod_datetime\":\"2015-03-17 13:37:58\",\n      \"units_plural\":\"\",\n
-        \     \"tiersets\":[\n        {\n          \"tierset_id\":4,\n          \"setup\":0,\n
-        \         \"base\":99,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"evy\",\n
-        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-03-17
-        13:37:58\",\n          \"mod_datetime\":\"2015-03-17 13:37:58\",\n          \"setup_formatted\":\"$
+        \     \"tierset_id\":14,\n      \"name\":\"Image Relay Big Plan\",\n      \"description\":\"for
+        {{ \\\"now\\\"|date(\\\"m\\/d\\/Y\\\") }} to {{ \\\"now\\\"|date_modify(\\\"+1
+        month\\\")|date(\\\"m\\/d\\/Y\\\") }}\",\n      \"units\":null,\n      \"accounting_sku\":null,\n
+        \     \"external_key\":\"enterprise\",\n      \"token\":\"4xjplvwgunh2\",\n
+        \     \"custom_1\":null,\n      \"custom_2\":null,\n      \"custom_3\":null,\n
+        \     \"write_datetime\":\"2015-03-17 13:37:39\",\n      \"mod_datetime\":\"2015-03-20
+        12:46:18\",\n      \"units_plural\":\"\",\n      \"tiersets\":[\n        {\n
+        \         \"tierset_id\":14,\n          \"setup\":0,\n          \"base\":500,\n
+        \         \"percent\":\"0.000000\",\n          \"paycycle\":\"mon\",\n          \"pricemodel\":\"fla\",\n
+        \         \"write_datetime\":\"2015-03-20 12:46:18\",\n          \"mod_datetime\":\"2015-03-20
+        12:46:18\",\n          \"setup_formatted\":\"$ 0.00\",\n          \"base_formatted\":\"$
+        500.00\",\n          \"percent_formatted\":\"0 %\",\n          \"pricemodel_desc\":\"Flat
+        Pricing (e.g. $X dollars per month)\",\n          \"tiers\":[\n            \n
+        \         ]\n        }\n      ]\n    },\n    {\n      \"item_id\":4,\n      \"item_type\":\"service\",\n
+        \     \"tierset_id\":15,\n      \"name\":\"Image Relay Small Plan\",\n      \"description\":\"for
+        {{ \\\"now\\\"|date(\\\"m\\/d\\/Y\\\") }} to {{ \\\"now\\\"|date_modify(\\\"+1
+        month\\\")|date(\\\"m\\/d\\/Y\\\") }}\",\n      \"units\":null,\n      \"accounting_sku\":null,\n
+        \     \"external_key\":\"basic\",\n      \"token\":\"i4k0u3wpt2zo\",\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-17
+        13:37:58\",\n      \"mod_datetime\":\"2015-03-20 14:34:28\",\n      \"units_plural\":\"\",\n
+        \     \"tiersets\":[\n        {\n          \"tierset_id\":15,\n          \"setup\":0,\n
+        \         \"base\":99,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"mon\",\n
+        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-03-20
+        14:34:28\",\n          \"mod_datetime\":\"2015-03-20 14:34:28\",\n          \"setup_formatted\":\"$
         0.00\",\n          \"base_formatted\":\"$ 99.00\",\n          \"percent_formatted\":\"0
         %\",\n          \"pricemodel_desc\":\"Flat Pricing (e.g. $X dollars per month)\",\n
         \         \"tiers\":[\n            \n          ]\n        }\n      ]\n    },\n
-        \   {\n      \"item_id\":5,\n      \"item_type\":\"service\",\n      \"tierset_id\":6,\n
-        \     \"name\":\"Image Relay Enterprise Plan\",\n      \"description\":null,\n
-        \     \"units\":null,\n      \"accounting_sku\":null,\n      \"external_key\":null,\n
-        \     \"token\":\"lh2r80vy4u9k\",\n      \"custom_1\":null,\n      \"custom_2\":null,\n
-        \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-17 13:38:27\",\n
-        \     \"mod_datetime\":\"2015-03-17 13:38:27\",\n      \"units_plural\":\"\",\n
-        \     \"tiersets\":[\n        {\n          \"tierset_id\":6,\n          \"setup\":0,\n
-        \         \"base\":1500,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"evy\",\n
-        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-03-17
-        13:38:27\",\n          \"mod_datetime\":\"2015-03-17 13:38:27\",\n          \"setup_formatted\":\"$
-        0.00\",\n          \"base_formatted\":\"$ 1500.00\",\n          \"percent_formatted\":\"0
+        \   {\n      \"item_id\":5,\n      \"item_type\":\"service\",\n      \"tierset_id\":17,\n
+        \     \"name\":\"Image Relay Enterprise Plan\",\n      \"description\":\"for
+        {{ \\\"now\\\"|date(\\\"m\\/d\\/Y\\\") }} to {{ \\\"now\\\"|date_modify(\\\"+3
+        month\\\")|date(\\\"m\\/d\\/Y\\\") }}\",\n      \"units\":null,\n      \"accounting_sku\":null,\n
+        \     \"external_key\":\"super\",\n      \"token\":\"lh2r80vy4u9k\",\n      \"custom_1\":null,\n
+        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"write_datetime\":\"2015-03-17
+        13:38:27\",\n      \"mod_datetime\":\"2015-03-24 07:23:38\",\n      \"units_plural\":\"\",\n
+        \     \"tiersets\":[\n        {\n          \"tierset_id\":17,\n          \"setup\":0,\n
+        \         \"base\":4500,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"qtr\",\n
+        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-03-24
+        07:23:38\",\n          \"mod_datetime\":\"2015-03-24 07:23:38\",\n          \"setup_formatted\":\"$
+        0.00\",\n          \"base_formatted\":\"$ 4500.00\",\n          \"percent_formatted\":\"0
         %\",\n          \"pricemodel_desc\":\"Flat Pricing (e.g. $X dollars per month)\",\n
         \         \"tiers\":[\n            \n          ]\n        }\n      ]\n    },\n
-        \   {\n      \"item_id\":6,\n      \"item_type\":\"service\",\n      \"tierset_id\":8,\n
+        \   {\n      \"item_id\":6,\n      \"item_type\":\"service\",\n      \"tierset_id\":16,\n
         \     \"name\":\"Test Product\",\n      \"description\":\"\",\n      \"units\":null,\n
         \     \"accounting_sku\":null,\n      \"external_key\":\"my_external_id\",\n
         \     \"token\":\"zguij401k256\",\n      \"custom_1\":null,\n      \"custom_2\":null,\n
         \     \"custom_3\":null,\n      \"write_datetime\":\"2015-03-19 10:29:14\",\n
-        \     \"mod_datetime\":\"2015-03-19 11:10:44\",\n      \"units_plural\":\"\",\n
-        \     \"tiersets\":[\n        {\n          \"tierset_id\":8,\n          \"setup\":0,\n
+        \     \"mod_datetime\":\"2015-03-23 13:34:26\",\n      \"units_plural\":\"\",\n
+        \     \"tiersets\":[\n        {\n          \"tierset_id\":16,\n          \"setup\":0,\n
         \         \"base\":100.99,\n          \"percent\":\"0.000000\",\n          \"paycycle\":\"mon\",\n
-        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-03-19
-        11:10:44\",\n          \"mod_datetime\":\"2015-03-19 11:10:44\",\n          \"setup_formatted\":\"$
+        \         \"pricemodel\":\"fla\",\n          \"write_datetime\":\"2015-03-23
+        13:34:26\",\n          \"mod_datetime\":\"2015-03-23 13:34:26\",\n          \"setup_formatted\":\"$
         0.00\",\n          \"base_formatted\":\"$ 100.99\",\n          \"percent_formatted\":\"0
         %\",\n          \"pricemodel_desc\":\"Flat Pricing (e.g. $X dollars per month)\",\n
         \         \"tiers\":[\n            \n          ]\n        }\n      ]\n    }\n
         \ ]\n}"
     http_version: 
-  recorded_at: Thu, 19 Mar 2015 16:39:21 GMT
+  recorded_at: Wed, 25 Mar 2015 14:18:32 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/item?limit=100&offset=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 14:18:29 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   \n  ]\n}"
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 14:18:32 GMT
 recorded_with: VCR 2.9.3

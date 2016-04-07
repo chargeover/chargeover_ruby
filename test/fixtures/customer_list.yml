@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://imagerelay-staging.chargeover.com/api/v3/customer
+    uri: https://imagerelay-staging.chargeover.com/api/v3/customer?limit=100&offset=0
     body:
       encoding: US-ASCII
       string: ''
@@ -19,37 +19,152 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2015 18:49:57 GMT
+      - Wed, 25 Mar 2015 14:18:27 GMT
       Server:
       - Apache
-      Content-Length:
-      - '1700'
+      Transfer-Encoding:
+      - chunked
       Content-Type:
       - application/json
     body:
       encoding: US-ASCII
       string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
-        \   {\n      \"superuser_id\":348,\n      \"external_key\":null,\n      \"token\":\"8c3nxe47hrdt\",\n
-        \     \"company\":\"Test Customer\",\n      \"bill_addr1\":\"123 Main Street\",\n
-        \     \"bill_addr2\":\"Suite 42\",\n      \"bill_addr3\":null,\n      \"bill_city\":\"Burlington\",\n
-        \     \"bill_state\":\"VT\",\n      \"bill_postcode\":\"05401\",\n      \"bill_country\":\"United
-        States\",\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n      \"ship_addr2\":null,\n
+        \   {\n      \"superuser_id\":367,\n      \"external_key\":\"546546\",\n      \"token\":\"v0puyxiwbezl\",\n
+        \     \"company\":\"Test Customer\",\n      \"bill_addr1\":\"144 Ross Hill\",\n
+        \     \"bill_addr2\":\"\",\n      \"bill_addr3\":\"\",\n      \"bill_city\":\"Huntington\",\n
+        \     \"bill_state\":\"Vermont\",\n      \"bill_postcode\":\"05462\",\n      \"bill_country\":\"\",\n
+        \     \"bill_notes\":null,\n      \"ship_addr1\":null,\n      \"ship_addr2\":null,\n
         \     \"ship_addr3\":null,\n      \"ship_city\":null,\n      \"ship_state\":null,\n
         \     \"ship_postcode\":null,\n      \"ship_country\":null,\n      \"ship_notes\":null,\n
         \     \"terms_id\":2,\n      \"class_id\":null,\n      \"custom_1\":null,\n
-        \     \"custom_2\":null,\n      \"custom_3\":null,\n      \"admin_id\":3,\n
-        \     \"campaign_id\":null,\n      \"custtype_id\":null,\n      \"currency_id\":1,\n
-        \     \"no_taxes\":false,\n      \"no_dunning\":false,\n      \"write_datetime\":\"2015-03-18
-        11:58:28\",\n      \"write_ipaddr\":\"70.88.244.230\",\n      \"mod_datetime\":\"2015-03-18
-        11:58:28\",\n      \"mod_ipaddr\":\"70.88.244.230\",\n      \"terms_name\":\"Net
-        30\",\n      \"terms_days\":30,\n      \"paid\":0,\n      \"total\":0,\n      \"balance\":0,\n
-        \     \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/8c3nxe47hrdt\",\n
+        \     \"custom_2\":\"http:\\/\\/dev.lvh.me:3000\",\n      \"custom_3\":null,\n
+        \     \"admin_id\":null,\n      \"campaign_id\":null,\n      \"custtype_id\":null,\n
+        \     \"currency_id\":1,\n      \"no_taxes\":false,\n      \"no_dunning\":false,\n
+        \     \"write_datetime\":\"2015-03-25 08:25:10\",\n      \"write_ipaddr\":\"70.88.244.230\",\n
+        \     \"mod_datetime\":\"2015-03-25 08:33:40\",\n      \"mod_ipaddr\":\"70.88.244.230\",\n
+        \     \"terms_name\":\"Net 30\",\n      \"terms_days\":30,\n      \"paid\":99,\n
+        \     \"total\":99,\n      \"balance\":0,\n      \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/v0puyxiwbezl\",\n
         \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"display_as\":\"Test
-        Customer\",\n      \"ship_block\":\"\",\n      \"bill_block\":\"123 Main Street\\nSuite
-        42\\nBurlington VT 05401\\nUnited States\",\n      \"superuser_name\":\"Test
-        Customer\",\n      \"superuser_first_name\":\"Test\",\n      \"superuser_last_name\":\"Customer\",\n
-        \     \"superuser_phone\":\"8025551212\",\n      \"superuser_email\":\"test@example.com\",\n
-        \     \"customer_id\":1\n    }\n  ]\n}"
+        Customer\",\n      \"ship_block\":\"\",\n      \"bill_block\":\"144 Ross Hill\\nHuntington
+        Vermont 05462\",\n      \"superuser_name\":\"Buffy Miller\",\n      \"superuser_first_name\":\"Buffy\",\n
+        \     \"superuser_last_name\":\"Miller\",\n      \"superuser_phone\":\"\",\n
+        \     \"superuser_email\":\"buffy@imagerelay.com\",\n      \"customer_id\":18\n
+        \   },\n    {\n      \"superuser_id\":368,\n      \"external_key\":\"46546546\",\n
+        \     \"token\":\"qbtdvwk73s1l\",\n      \"company\":\"Test Customer Two\",\n
+        \     \"bill_addr1\":\"144 Ross Hill\",\n      \"bill_addr2\":\"\",\n      \"bill_addr3\":\"\",\n
+        \     \"bill_city\":\"Huntington\",\n      \"bill_state\":\"Vermont\",\n      \"bill_postcode\":\"05462\",\n
+        \     \"bill_country\":\"\",\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"terms_id\":2,\n      \"class_id\":null,\n
+        \     \"custom_1\":null,\n      \"custom_2\":\"http:\\/\\/dev.lvh.me:3000\",\n
+        \     \"custom_3\":null,\n      \"admin_id\":null,\n      \"campaign_id\":null,\n
+        \     \"custtype_id\":null,\n      \"currency_id\":1,\n      \"no_taxes\":false,\n
+        \     \"no_dunning\":false,\n      \"write_datetime\":\"2015-03-25 08:34:43\",\n
+        \     \"write_ipaddr\":\"70.88.244.230\",\n      \"mod_datetime\":\"2015-03-25
+        08:44:08\",\n      \"mod_ipaddr\":\"70.88.244.230\",\n      \"terms_name\":\"Net
+        30\",\n      \"terms_days\":30,\n      \"paid\":99,\n      \"total\":99,\n
+        \     \"balance\":0,\n      \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/qbtdvwk73s1l\",\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"display_as\":\"Test
+        Customer Two\",\n      \"ship_block\":\"\",\n      \"bill_block\":\"144 Ross
+        Hill\\nHuntington Vermont 05462\",\n      \"superuser_name\":\"Buffy Miller\",\n
+        \     \"superuser_first_name\":\"Buffy\",\n      \"superuser_last_name\":\"Miller\",\n
+        \     \"superuser_phone\":\"\",\n      \"superuser_email\":\"buffy@imagerelay.com\",\n
+        \     \"customer_id\":19\n    },\n    {\n      \"superuser_id\":369,\n      \"external_key\":\"456456\",\n
+        \     \"token\":\"gy4jionwsapl\",\n      \"company\":\"Test Customer 3\",\n
+        \     \"bill_addr1\":\"144 Ross Hill\",\n      \"bill_addr2\":\"\",\n      \"bill_addr3\":\"\",\n
+        \     \"bill_city\":\"Huntington\",\n      \"bill_state\":\"Vermont\",\n      \"bill_postcode\":\"05462\",\n
+        \     \"bill_country\":\"\",\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"terms_id\":2,\n      \"class_id\":null,\n
+        \     \"custom_1\":null,\n      \"custom_2\":\"http:\\/\\/dev.lvh.me:3000\",\n
+        \     \"custom_3\":null,\n      \"admin_id\":null,\n      \"campaign_id\":null,\n
+        \     \"custtype_id\":null,\n      \"currency_id\":1,\n      \"no_taxes\":false,\n
+        \     \"no_dunning\":false,\n      \"write_datetime\":\"2015-03-25 08:45:55\",\n
+        \     \"write_ipaddr\":\"70.88.244.230\",\n      \"mod_datetime\":\"2015-03-25
+        08:49:16\",\n      \"mod_ipaddr\":\"70.88.244.230\",\n      \"terms_name\":\"Net
+        30\",\n      \"terms_days\":30,\n      \"paid\":99,\n      \"total\":99,\n
+        \     \"balance\":0,\n      \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/gy4jionwsapl\",\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"display_as\":\"Test
+        Customer 3\",\n      \"ship_block\":\"\",\n      \"bill_block\":\"144 Ross
+        Hill\\nHuntington Vermont 05462\",\n      \"superuser_name\":\"Buffy Miller\",\n
+        \     \"superuser_first_name\":\"Buffy\",\n      \"superuser_last_name\":\"Miller\",\n
+        \     \"superuser_phone\":\"\",\n      \"superuser_email\":\"buffy@imagerelay.com\",\n
+        \     \"customer_id\":20\n    },\n    {\n      \"superuser_id\":370,\n      \"external_key\":\"4654654\",\n
+        \     \"token\":\"h0ilqw5pervt\",\n      \"company\":\"Test Customer 4\",\n
+        \     \"bill_addr1\":\"144 Ross Hill\",\n      \"bill_addr2\":\"\",\n      \"bill_addr3\":\"\",\n
+        \     \"bill_city\":\"Huntington\",\n      \"bill_state\":\"Vermont\",\n      \"bill_postcode\":\"05462\",\n
+        \     \"bill_country\":\"\",\n      \"bill_notes\":null,\n      \"ship_addr1\":null,\n
+        \     \"ship_addr2\":null,\n      \"ship_addr3\":null,\n      \"ship_city\":null,\n
+        \     \"ship_state\":null,\n      \"ship_postcode\":null,\n      \"ship_country\":null,\n
+        \     \"ship_notes\":null,\n      \"terms_id\":2,\n      \"class_id\":null,\n
+        \     \"custom_1\":null,\n      \"custom_2\":\"http:\\/\\/dev.lvh.me:3000\",\n
+        \     \"custom_3\":null,\n      \"admin_id\":null,\n      \"campaign_id\":null,\n
+        \     \"custtype_id\":null,\n      \"currency_id\":1,\n      \"no_taxes\":false,\n
+        \     \"no_dunning\":false,\n      \"write_datetime\":\"2015-03-25 08:51:14\",\n
+        \     \"write_ipaddr\":\"70.88.244.230\",\n      \"mod_datetime\":\"2015-03-25
+        08:52:00\",\n      \"mod_ipaddr\":\"70.88.244.230\",\n      \"terms_name\":\"Net
+        30\",\n      \"terms_days\":30,\n      \"paid\":99,\n      \"total\":99,\n
+        \     \"balance\":0,\n      \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/h0ilqw5pervt\",\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"display_as\":\"Test
+        Customer 4\",\n      \"ship_block\":\"\",\n      \"bill_block\":\"144 Ross
+        Hill\\nHuntington Vermont 05462\",\n      \"superuser_name\":\"Buffy Miller\",\n
+        \     \"superuser_first_name\":\"Buffy\",\n      \"superuser_last_name\":\"Miller\",\n
+        \     \"superuser_phone\":\"\",\n      \"superuser_email\":\"buffy@imagerelay.com\",\n
+        \     \"customer_id\":21\n    },\n    {\n      \"superuser_id\":371,\n      \"external_key\":\"23\",\n
+        \     \"token\":\"o01i859qrfkg\",\n      \"company\":\"Acme Widgets\",\n      \"bill_addr1\":\"144
+        Ross Hill\",\n      \"bill_addr2\":null,\n      \"bill_addr3\":null,\n      \"bill_city\":\"Huntington\",\n
+        \     \"bill_state\":\"Vermont\",\n      \"bill_postcode\":\"05462\",\n      \"bill_country\":\"US\",\n
+        \     \"bill_notes\":null,\n      \"ship_addr1\":null,\n      \"ship_addr2\":null,\n
+        \     \"ship_addr3\":null,\n      \"ship_city\":null,\n      \"ship_state\":null,\n
+        \     \"ship_postcode\":null,\n      \"ship_country\":null,\n      \"ship_notes\":null,\n
+        \     \"terms_id\":2,\n      \"class_id\":null,\n      \"custom_1\":null,\n
+        \     \"custom_2\":\"http:\\/\\/dev.lvh.me:3000\",\n      \"custom_3\":null,\n
+        \     \"admin_id\":null,\n      \"campaign_id\":null,\n      \"custtype_id\":null,\n
+        \     \"currency_id\":1,\n      \"no_taxes\":false,\n      \"no_dunning\":false,\n
+        \     \"write_datetime\":\"2015-03-25 08:52:51\",\n      \"write_ipaddr\":\"70.88.244.230\",\n
+        \     \"mod_datetime\":\"2015-03-25 08:52:51\",\n      \"mod_ipaddr\":\"70.88.244.230\",\n
+        \     \"terms_name\":\"Net 30\",\n      \"terms_days\":30,\n      \"paid\":99,\n
+        \     \"total\":99,\n      \"balance\":0,\n      \"url_paymethodlink\":\"https:\\/\\/imagerelay-staging.chargeover.com\\/r\\/paymethod\\/i\\/o01i859qrfkg\",\n
+        \     \"currency_symbol\":\"$\",\n      \"currency_iso4217\":\"USD\",\n      \"display_as\":\"Acme
+        Widgets\",\n      \"ship_block\":\"\",\n      \"bill_block\":\"144 Ross Hill\\nHuntington
+        Vermont 05462\\nUS\",\n      \"superuser_name\":\"Buffy Miller\",\n      \"superuser_first_name\":\"Buffy\",\n
+        \     \"superuser_last_name\":\"Miller\",\n      \"superuser_phone\":\"\",\n
+        \     \"superuser_email\":\"buffy@imagerelay.com\",\n      \"customer_id\":22\n
+        \   }\n  ]\n}"
     http_version: 
-  recorded_at: Wed, 18 Mar 2015 18:49:48 GMT
+  recorded_at: Wed, 25 Mar 2015 14:18:30 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/customer?limit=100&offset=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 14:18:28 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   \n  ]\n}"
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 14:18:31 GMT
 recorded_with: VCR 2.9.3

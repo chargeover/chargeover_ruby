@@ -1,0 +1,361 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user?limit=100&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2015 18:47:09 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   {\n      \"user_id\":348,\n      \"external_key\":null,\n      \"first_name\":\"Todd\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Customer\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"newemail@example.com\",\n      \"token\":\"z5anc8bqi7hg\",\n
+        \     \"phone\":\"8025551212\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-19 09:08:34\",\n      \"name\":\"Todd Customer\",\n
+        \     \"display_as\":\"Todd Customer\",\n      \"username\":\"test@example.com\"\n
+        \   },\n    {\n      \"user_id\":349,\n      \"external_key\":null,\n      \"first_name\":\"John\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Smith\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"customer@example.com\",\n      \"token\":\"85gtskxf6y7n\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-19 08:49:55\",\n      \"name\":\"John Smith\",\n
+        \     \"display_as\":\"John Smith\",\n      \"username\":\"1h37br90ixam\"\n
+        \   },\n    {\n      \"user_id\":350,\n      \"external_key\":null,\n      \"first_name\":\"John\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Smith\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"customer@example.com\",\n      \"token\":\"4d29v307rfzx\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-19 08:55:33\",\n      \"name\":\"John Smith\",\n
+        \     \"display_as\":\"John Smith\",\n      \"username\":\"zlf7reaikbnh\"\n
+        \   },\n    {\n      \"user_id\":351,\n      \"external_key\":null,\n      \"first_name\":\"Test\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Customer\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"cdh3rawsoeyq\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-19 12:44:36\",\n      \"name\":\"Test Customer\",\n
+        \     \"display_as\":\"Test Customer\",\n      \"username\":\"buffy@imagerelay.com\"\n
+        \   },\n    {\n      \"user_id\":352,\n      \"external_key\":null,\n      \"first_name\":\"Keith's\",\n
+        \     \"middle_name_glob\":\"Test\",\n      \"last_name\":\"Cmopany\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"\",\n      \"token\":\"oetamuxqzlk2\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-19 14:35:32\",\n      \"name\":\"Keith's
+        Test Cmopany\",\n      \"display_as\":\"Keith's Test Cmopany\",\n      \"username\":\"VGajJHy0l4te\"\n
+        \   },\n    {\n      \"user_id\":353,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"uimlp6frsq24\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-20 14:09:52\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"b398w1quyngx\"\n
+        \   },\n    {\n      \"user_id\":354,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"sa9p1m6l0dh8\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-20 14:29:22\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"3sgcpf1aw0m2\"\n
+        \   },\n    {\n      \"user_id\":355,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"aec2v0ind1lm\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-20 14:32:48\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"z1bivswgrtdh\"\n
+        \   },\n    {\n      \"user_id\":356,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"0q1zy4xe2urj\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-20 14:35:55\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"oagsltich37z\"\n
+        \   },\n    {\n      \"user_id\":357,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"1otsknw2uxr6\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-20 14:52:58\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"qz1s34g0pyw2\"\n
+        \   },\n    {\n      \"user_id\":358,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"ptzlu908gqca\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-20 14:55:42\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"4c6b3irm8ehu\"\n
+        \   },\n    {\n      \"user_id\":359,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"ocq9z7uwgp5b\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-23 09:16:00\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"ob27miyqnd9r\"\n
+        \   },\n    {\n      \"user_id\":360,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"0ep85lsa6urt\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-23 11:33:44\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"bf5gmc0w4y2k\"\n
+        \   },\n    {\n      \"user_id\":361,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"m2xra1hkluoi\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-23 13:05:44\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"lpwgtjm59a8y\"\n
+        \   },\n    {\n      \"user_id\":362,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"0qj13lk76ndx\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-23 13:14:35\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"nb0795a4qvgf\"\n
+        \   },\n    {\n      \"user_id\":363,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"7tleyw3uhvaj\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-23 13:16:38\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"hrukvzfqs8lw\"\n
+        \   },\n    {\n      \"user_id\":364,\n      \"external_key\":null,\n      \"first_name\":\"Test\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Seiko\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"billing@imagerelay.com\",\n      \"token\":\"rosnu10p3ytv\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-24 07:24:20\",\n      \"name\":\"Test Seiko\",\n
+        \     \"display_as\":\"Test Seiko\",\n      \"username\":\"billing@imagerelay.com\"\n
+        \   },\n    {\n      \"user_id\":365,\n      \"external_key\":null,\n      \"first_name\":\"test\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"again\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@sethmiller.com\",\n      \"token\":\"tgqfa2z79uji\",\n
+        \     \"phone\":\"8025984963\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-24 07:40:43\",\n      \"name\":\"test again\",\n
+        \     \"display_as\":\"test again\",\n      \"username\":\"buffy@sethmiller.com\"\n
+        \   },\n    {\n      \"user_id\":366,\n      \"external_key\":null,\n      \"first_name\":\"Test\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"multiple\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@sethmiller.com, buffy@imagerelay.com\",\n
+        \     \"token\":\"jbs1n4rgmte9\",\n      \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16
+        11:30:13\",\n      \"mod_datetime\":\"2015-03-24 07:57:52\",\n      \"name\":\"Test
+        multiple\",\n      \"display_as\":\"Test multiple\",\n      \"username\":\"buffy@sethmiller.com,
+        buffy@imagerelay.com\"\n    },\n    {\n      \"user_id\":367,\n      \"external_key\":null,\n
+        \     \"first_name\":\"Buffy\",\n      \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n
+        \     \"name_suffix\":null,\n      \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n
+        \     \"token\":\"pmy0uo9jkhwz\",\n      \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16
+        11:30:13\",\n      \"mod_datetime\":\"2015-03-25 08:25:10\",\n      \"name\":\"Buffy
+        Miller\",\n      \"display_as\":\"Buffy Miller\",\n      \"username\":\"9n78zuthgr32\"\n
+        \   },\n    {\n      \"user_id\":368,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"xlwubkf05nvj\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 08:34:43\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"h4kvb9ci61lf\"\n
+        \   },\n    {\n      \"user_id\":369,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"ds1hyfez6gna\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 08:45:55\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"ib9ds4ukhfc3\"\n
+        \   },\n    {\n      \"user_id\":370,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"yrcovmqx0spt\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 08:51:14\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"nq61md5jcr3g\"\n
+        \   },\n    {\n      \"user_id\":371,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"rlgk8nhtdcj5\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 08:52:51\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"bclhs42arq5i\"\n
+        \   },\n    {\n      \"user_id\":372,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"c0t3vjlbpq1a\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 14:18:29\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"ma0d45rtxqec\"\n
+        \   },\n    {\n      \"user_id\":373,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"nmabdujfqylz\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 14:23:23\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"c9erqsf403gp\"\n
+        \   },\n    {\n      \"user_id\":374,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"z8rgn10aewyo\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 14:38:22\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"l8spguqbd12n\"\n
+        \   },\n    {\n      \"user_id\":375,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"q7jryt1ub0c9\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 15:02:21\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"bd2o5iug9p46\"\n
+        \   },\n    {\n      \"user_id\":376,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"26tg1ja79fyr\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 15:03:47\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"9tjoxf47w6av\"\n
+        \   },\n    {\n      \"user_id\":377,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"wphgeb8l19my\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 15:08:37\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"p75o0lvf1syg\"\n
+        \   },\n    {\n      \"user_id\":378,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"sneuv5hp6m97\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-25 15:14:28\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"um9bqskxrvjy\"\n
+        \   },\n    {\n      \"user_id\":379,\n      \"external_key\":null,\n      \"first_name\":\"Test\",\n
+        \     \"middle_name_glob\":\"Customer\",\n      \"last_name\":\"3\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"\",\n      \"token\":\"s0c1lgjf2o9n\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-27 13:24:47\",\n      \"name\":\"Test Customer
+        3\",\n      \"display_as\":\"Test Customer 3\",\n      \"username\":\"erxfSy3CPVGH\"\n
+        \   },\n    {\n      \"user_id\":380,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"8zitloug9apv\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-30 11:54:34\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"diy8cmf953rk\"\n
+        \   },\n    {\n      \"user_id\":381,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"3nvq17uard0p\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-30 11:57:44\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"obs138izwxra\"\n
+        \   },\n    {\n      \"user_id\":382,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"cloqks0rb3w6\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-30 12:01:04\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"xdg9ebpukqym\"\n
+        \   },\n    {\n      \"user_id\":383,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"8pd1yrf4bt56\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-30 12:11:31\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"ch4ka6u9tije\"\n
+        \   },\n    {\n      \"user_id\":384,\n      \"external_key\":null,\n      \"first_name\":\"Acme\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Widgets\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@sethmiller.com\",\n      \"token\":\"obiypk9a1trw\",\n
+        \     \"phone\":\"8025984963\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-31 09:22:12\",\n      \"name\":\"Acme Widgets\",\n
+        \     \"display_as\":\"Acme Widgets\",\n      \"username\":\"NpO0ItcT9AFP\"\n
+        \   },\n    {\n      \"user_id\":385,\n      \"external_key\":null,\n      \"first_name\":\"Test\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Customer\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"jhw3usy42fv0\",\n
+        \     \"phone\":\"8025984963\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-03-31 11:24:48\",\n      \"name\":\"Test Customer\",\n
+        \     \"display_as\":\"Test Customer\",\n      \"username\":\"ZMGsYQdi5IwL\"\n
+        \   },\n    {\n      \"user_id\":386,\n      \"external_key\":null,\n      \"first_name\":\"Keith\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Palmer\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"keith+testtaxes@chargeover.com\",\n
+        \     \"token\":\"xu9msae74wn0\",\n      \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16
+        11:30:13\",\n      \"mod_datetime\":\"2015-03-31 14:45:23\",\n      \"name\":\"Keith
+        Palmer\",\n      \"display_as\":\"Keith Palmer\",\n      \"username\":\"keith+testtaxes@chargeover.com\"\n
+        \   },\n    {\n      \"user_id\":387,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"diuvjzrcs2q9\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-02 14:53:22\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"fwmt2jgpvs94\"\n
+        \   },\n    {\n      \"user_id\":388,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"u5go86vpelnj\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-02 14:58:47\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"b2luvrxsio5n\"\n
+        \   },\n    {\n      \"user_id\":389,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"u58m4i0gow6d\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-02 15:06:05\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"1e4piurfzmav\"\n
+        \   },\n    {\n      \"user_id\":390,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"9x73it0scv6q\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-06 09:57:08\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"u207hso19lbx\"\n
+        \   },\n    {\n      \"user_id\":391,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"4te5p9ihk20l\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-06 10:35:01\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"5tr8divpqesa\"\n
+        \   },\n    {\n      \"user_id\":392,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"wmia3tgvrksq\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-06 10:37:21\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"4cshpn7qze59\"\n
+        \   },\n    {\n      \"user_id\":393,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"b4kiph1f89ur\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-06 10:39:08\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"n9ik0hg5tu28\"\n
+        \   },\n    {\n      \"user_id\":394,\n      \"external_key\":null,\n      \"first_name\":\"Buffy\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Miller\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"buffy@imagerelay.com\",\n      \"token\":\"c1w098giopus\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-06 10:40:41\",\n      \"name\":\"Buffy Miller\",\n
+        \     \"display_as\":\"Buffy Miller\",\n      \"username\":\"2bitxjhfsqrd\"\n
+        \   },\n    {\n      \"user_id\":395,\n      \"external_key\":null,\n      \"first_name\":\"Accounts\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Payable\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"accountspayable@example.com\",\n
+        \     \"token\":\"7h4it9dxr0km\",\n      \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16
+        11:30:13\",\n      \"mod_datetime\":\"2015-04-06 12:37:05\",\n      \"name\":\"Accounts
+        Payable\",\n      \"display_as\":\"Accounts Payable\",\n      \"username\":\"accountspayable@example.com\"\n
+        \   },\n    {\n      \"user_id\":396,\n      \"external_key\":null,\n      \"first_name\":\"John\",\n
+        \     \"middle_name_glob\":null,\n      \"last_name\":\"Doe\",\n      \"name_suffix\":null,\n
+        \     \"title\":\"\",\n      \"email\":\"jd@example.com\",\n      \"token\":\"wek5obq31298\",\n
+        \     \"phone\":\"\",\n      \"write_datetime\":\"2015-03-16 11:30:13\",\n
+        \     \"mod_datetime\":\"2015-04-06 12:46:03\",\n      \"name\":\"John Doe\",\n
+        \     \"display_as\":\"John Doe\",\n      \"username\":\"8bur5c7g1voh\"\n
+        \   }\n  ]\n}"
+    http_version: 
+  recorded_at: Mon, 06 Apr 2015 18:47:21 GMT
+- request:
+    method: get
+    uri: https://imagerelay-staging.chargeover.com/api/v3/user?limit=100&offset=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Apr 2015 18:47:10 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\":200,\n  \"status\":\"OK\",\n  \"message\":\"\",\n  \"response\":[\n
+        \   \n  ]\n}"
+    http_version: 
+  recorded_at: Mon, 06 Apr 2015 18:47:22 GMT
+recorded_with: VCR 2.9.3
